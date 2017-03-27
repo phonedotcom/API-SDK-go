@@ -23,5 +23,5 @@ type ListPhoneNumbers struct {
 	Limit int32 `json:"limit,omitempty"`
 
 	// Array of Contact Phone Number Objects. See below for details.
-	Items []PhoneNumberContact `json:"items,omitempty"`
+	Items []PhoneNumberFull `json:"items,omitempty"`
 }

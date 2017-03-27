@@ -108,7 +108,7 @@ func (a MenusApi) CreateAccountMenu(accountId int32, data CreateMenuParams) (*Me
 
 /**
  * Delete an individual menu
- * This service shows the details of an individual menu.
+ * See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param menuId Menu ID
@@ -328,7 +328,7 @@ func (a MenusApi) ListAccountMenus(accountId int32, filtersId []string, filtersN
 
 /**
  * Replace an individual menu
- * This service replaces the details of an individual Menu.
+ * See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param menuId Menu ID

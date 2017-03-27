@@ -406,6 +406,80 @@ func (a MediaApi) ListAccountMedia(accountId int32, filtersId []string, filtersN
  *
  * @param accountId Account ID
  * @param mediaId Media ID
+ * @param jsonParam Media extra parameters
+ * @param file Media file
+ * @return *MediaFull
+ */
+func (a MediaApi) ReplaceAccountMediaFiles(accountId int32, mediaId int32, jsonParam string, file *os.File) (*MediaFull, *APIResponse, error) {
+
+	var localVarHttpMethod = strings.ToUpper("Put")
+	// create path and map variables
+	localVarPath := a.Configuration.BasePath + "/accounts/{account_id}/media/files/{media_id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"account_id"+"}", fmt.Sprintf("%v", accountId), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"media_id"+"}", fmt.Sprintf("%v", mediaId), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := make(map[string]string)
+	var localVarPostBody interface{}
+	var localVarFileName string
+	var localVarFileBytes []byte
+	// authentication '(apiKey)' required
+	// set key with prefix in header
+	localVarHeaderParams["Authorization"] = a.Configuration.GetAPIKeyWithPrefix("Authorization")
+	// add default headers if any
+	for key := range a.Configuration.DefaultHeader {
+		localVarHeaderParams[key] = a.Configuration.DefaultHeader[key]
+	}
+
+	clearEmptyParams(localVarQueryParams)
+
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{ "application/json",  }
+
+	// set Content-Type header
+	localVarHttpContentType := a.Configuration.APIClient.SelectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{
+		"application/json",
+		}
+
+	// set Accept header
+	localVarHttpHeaderAccept := a.Configuration.APIClient.SelectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	localVarFormParams["json"] = a.Configuration.APIClient.ParameterToString(jsonParam, "")
+	fbs, _ := ioutil.ReadAll(file)
+	localVarFileBytes = fbs
+	localVarFileName = file.Name()
+	var successPayload = new(MediaFull)
+	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+
+	var localVarURL, _ = url.Parse(localVarPath)
+	localVarURL.RawQuery = localVarQueryParams.Encode()
+	var localVarAPIResponse = &APIResponse{Operation: "ReplaceAccountMediaFiles", Method: localVarHttpMethod, RequestURL: localVarURL.String()}
+	if localVarHttpResponse != nil {
+		localVarAPIResponse.Response = localVarHttpResponse.RawResponse
+		localVarAPIResponse.Payload = localVarHttpResponse.Body()
+	}
+
+	if err != nil {
+		return successPayload, localVarAPIResponse, err
+	}
+	err = json.Unmarshal(localVarHttpResponse.Body(), &successPayload)
+	return successPayload, localVarAPIResponse, err
+}
+
+/**
+ * Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+ * See Account Media for more info on the properties.
+ *
+ * @param accountId Account ID
+ * @param mediaId Media ID
  * @param data Media data
  * @return *MediaFull
  */
@@ -413,7 +487,7 @@ func (a MediaApi) ReplaceAccountMediaTts(accountId int32, mediaId int32, data Cr
 
 	var localVarHttpMethod = strings.ToUpper("Put")
 	// create path and map variables
-	localVarPath := a.Configuration.BasePath + "/accounts/{account_id}/media/{media_id}"
+	localVarPath := a.Configuration.BasePath + "/accounts/{account_id}/media/tts/{media_id}"
 	localVarPath = strings.Replace(localVarPath, "{"+"account_id"+"}", fmt.Sprintf("%v", accountId), -1)
 	localVarPath = strings.Replace(localVarPath, "{"+"media_id"+"}", fmt.Sprintf("%v", mediaId), -1)
 

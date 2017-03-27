@@ -9,7 +9,8 @@ Method | HTTP request | Description
 [**DeleteAccountMedia**](MediaApi.md#DeleteAccountMedia) | **Delete** /accounts/{account_id}/media/{media_id} | Delete an individual media record
 [**GetAccountMedia**](MediaApi.md#GetAccountMedia) | **Get** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
 [**ListAccountMedia**](MediaApi.md#ListAccountMedia) | **Get** /accounts/{account_id}/media | Get a list of media recordings for an account
-[**ReplaceAccountMediaTts**](MediaApi.md#ReplaceAccountMediaTts) | **Put** /accounts/{account_id}/media/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**ReplaceAccountMediaFiles**](MediaApi.md#ReplaceAccountMediaFiles) | **Put** /accounts/{account_id}/media/files/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+[**ReplaceAccountMediaTts**](MediaApi.md#ReplaceAccountMediaTts) | **Put** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
 
 
 # **CreateAccountMediaFiles**
@@ -157,6 +158,38 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ListMedia**](ListMedia.md)
+
+### Authorization
+
+[apiKey](../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ReplaceAccountMediaFiles**
+> MediaFull ReplaceAccountMediaFiles($accountId, $mediaId, $json, $file)
+
+Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
+
+See Account Media for more info on the properties.
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **accountId** | **int32**| Account ID | 
+ **mediaId** | **int32**| Media ID | 
+ **json** | **string**| Media extra parameters | [optional] 
+ **file** | ***os.File**| Media file | [optional] 
+
+### Return type
+
+[**MediaFull**](MediaFull.md)
 
 ### Authorization
 

@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **VoicemailNotificationsSms** | **string** | SMS notifications for voicemails | [optional] [default to null]
 **CallNotificationsEmails** | **[]string** | Email notifications for calls. Can be a single email or an array of emails | [optional] [default to null]
 **CallNotificationsSms** | **string** | SMS notifications for calls | [optional] [default to null]
-**Route** | **[]string** | Route object lookup (must belong to this extension) | [optional] [default to null]
+**Route** | **string** | Route object lookup (must belong to this extension) | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

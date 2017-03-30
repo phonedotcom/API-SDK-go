@@ -79,5 +79,5 @@ type ReplaceExtensionParams struct {
 	CallNotificationsSms string `json:"call_notifications[sms],omitempty"`
 
 	// Route object lookup (must belong to this extension)
-	Route []string `json:"route,omitempty"`
+	Route string `json:"route,omitempty"`
 }

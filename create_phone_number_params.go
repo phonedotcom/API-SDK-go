@@ -27,24 +27,12 @@ type CreatePhoneNumberParams struct {
 	// Block anonymous calls
 	BlockAnonymous bool `json:"block_anonymous,omitempty"`
 
-	// Caller ID name
-	CallerIdName string `json:"caller_id[name],omitempty"`
+	// Caller ID object
+	CallerId CallerIdPhoneNumber `json:"caller_id,omitempty"`
 
-	// Caller ID type
-	CallerIdType string `json:"caller_id[type],omitempty"`
+	// SMS Forwarding Object, or NULL
+	SmsForwarding SmsForwardingParams `json:"sms_forwarding,omitempty"`
 
-	// 'application' or 'extension'
-	SmsForwardingType string `json:"sms_forwarding[type],omitempty"`
-
-	// Application lookup object
-	SmsForwardingApplication interface{} `json:"sms_forwarding[application],omitempty"`
-
-	// Extension lookup object
-	SmsForwardingExtension interface{} `json:"sms_forwarding[extension],omitempty"`
-
-	// Call notifications for emails. Can be a single email or an array of emails
-	CallNotificationsEmails []string `json:"call_notifications[emails],omitempty"`
-
-	// Call notification for SMS
-	CallNotificationsSms string `json:"call_notifications[sms],omitempty"`
+	// Call Notifications object
+	CallNotifications CallNotifications `json:"call_notifications,omitempty"`
 }

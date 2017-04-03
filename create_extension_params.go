@@ -12,6 +12,12 @@ package swagger
 
 type CreateExtensionParams struct {
 
+	// Voicemail object
+	Voicemail Voicemail `json:"voicemail,omitempty"`
+
+	// Call Notifications object
+	CallNotifications CallNotifications `json:"call_notifications,omitempty"`
+
 	// Caller ID
 	CallerId string `json:"caller_id,omitempty"`
 
@@ -39,45 +45,12 @@ type CreateExtensionParams struct {
 	// Recording lookup object
 	NameGreeting interface{} `json:"name_greeting,omitempty"`
 
-	// Recording lookup object
-	VoicemailGreetingAlternate interface{} `json:"voicemail[greeting][alternate],omitempty"`
-
 	// Local area code
 	LocalAreaCode int32 `json:"local_area_code,omitempty"`
-
-	// Enable the \"leave a message\" prompt for voicemail
-	VoicemailGreetingEnableLeaveMessagePrompt bool `json:"voicemail[greeting][enable_leave_message_prompt],omitempty"`
-
-	// Voicemail enabled
-	VoicemailEnabled bool `json:"voicemail[enabled],omitempty"`
 
 	// Enable outgoing calls
 	EnableOutboundCalls bool `json:"enable_outbound_calls,omitempty"`
 
 	// Enable Call Waiting
 	EnableCallWaiting bool `json:"enable_call_waiting,omitempty"`
-
-	// Voicemail password
-	VoicemailPassword int32 `json:"voicemail[password],omitempty"`
-
-	// Voicemail greeting type
-	VoicemailGreetingType string `json:"voicemail[greeting][type],omitempty"`
-
-	// Recording lookup object
-	VoicemailGreetingStandard interface{} `json:"voicemail[greeting][standard],omitempty"`
-
-	// Voicemail transcription type
-	VoicemailTranscription string `json:"voicemail[transcription],omitempty"`
-
-	// Email notifications for voicemails. Can be a single email or an array of emails
-	VoicemailNotificationsEmails []string `json:"voicemail[notifications][emails],omitempty"`
-
-	// SMS notifications for voicemails
-	VoicemailNotificationsSms string `json:"voicemail[notifications][sms],omitempty"`
-
-	// Email notifications for calls. Can be a single email or an array of emails
-	CallNotificationsEmails []string `json:"call_notifications[emails],omitempty"`
-
-	// SMS notifications for calls
-	CallNotificationsSms string `json:"call_notifications[sms],omitempty"`
 }

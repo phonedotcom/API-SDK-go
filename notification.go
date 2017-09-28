@@ -10,6 +10,7 @@
 
 package swagger
 
+// The Call Notifications object configures the recipient(s) of notifications when calls are received to this extension.
 type Notification struct {
 
 	// Array of email addresses

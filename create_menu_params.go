@@ -14,11 +14,11 @@ type CreateMenuParams struct {
 
 	Name string `json:"name,omitempty"`
 
-	MainMessage interface{} `json:"main_message,omitempty"`
+	Greeting interface{} `json:"greeting,omitempty"`
 
-	InvalidKeypressMessage interface{} `json:"invalid_keypress_message,omitempty"`
+	KeypressError interface{} `json:"keypress_error,omitempty"`
 
-	AllowExtensionDial bool `json:"allow_extension_dial,omitempty"`
+	AllowExtensionDial string `json:"allow_extension_dial,omitempty"`
 
 	KeypressWaitTime int32 `json:"keypress_wait_time,omitempty"`
 

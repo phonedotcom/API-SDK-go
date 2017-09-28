@@ -49,13 +49,13 @@ type CreateContactParams struct {
 	JobTitle string `json:"job_title,omitempty"`
 
 	// Email Addresses
-	Emails []interface{} `json:"emails,omitempty"`
+	Emails []Email `json:"emails,omitempty"`
 
 	// Phone Numbers
-	PhoneNumbers []interface{} `json:"phone_numbers,omitempty"`
+	PhoneNumbers []PhoneNumberContact `json:"phone_numbers,omitempty"`
 
 	// Addresses
-	Addresses []interface{} `json:"addresses,omitempty"`
+	Addresses []AddressListContacts `json:"addresses,omitempty"`
 
 	// Contact Group
 	Group interface{} `json:"group,omitempty"`

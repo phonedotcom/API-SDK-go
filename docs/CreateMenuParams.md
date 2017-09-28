@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** |  | [optional] [default to null]
-**MainMessage** | [**interface{}**](interface{}.md) |  | [optional] [default to null]
-**InvalidKeypressMessage** | [**interface{}**](interface{}.md) |  | [optional] [default to null]
-**AllowExtensionDial** | **bool** |  | [optional] [default to null]
+**Greeting** | [**interface{}**](interface{}.md) |  | [optional] [default to null]
+**KeypressError** | [**interface{}**](interface{}.md) |  | [optional] [default to null]
+**AllowExtensionDial** | **string** |  | [optional] [default to null]
 **KeypressWaitTime** | **int32** |  | [optional] [default to null]
 **TimeoutHandler** | [**interface{}**](interface{}.md) |  | [optional] [default to null]
 **Options** | [**[]interface{}**](interface{}.md) |  | [optional] [default to null]

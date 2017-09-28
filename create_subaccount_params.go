@@ -19,8 +19,8 @@ type CreateSubaccountParams struct {
 	Password string `json:"password"`
 
 	// Contact Object. See below for details.
-	Contact ContactSubaccount `json:"contact,omitempty"`
+	Contact ContactResponse `json:"contact,omitempty"`
 
 	// Contact Object for billing purposes. See below for details.
-	BillingContact ContactSubaccount `json:"billing_contact,omitempty"`
+	BillingContact ContactResponse `json:"billing_contact,omitempty"`
 }

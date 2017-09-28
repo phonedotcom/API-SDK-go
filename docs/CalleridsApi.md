@@ -4,15 +4,15 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetCallerIds**](CalleridsApi.md#GetCallerIds) | **Get** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use
+[**GetCallerIds**](CalleridsApi.md#GetCallerIds) | **Get** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use.
 
 
 # **GetCallerIds**
 > ListCallerIds GetCallerIds($accountId, $extensionId, $filtersNumber, $filtersName, $sortNumber, $sortName, $limit, $offset, $fields)
 
-Show the Caller ID options a given extension can use
+Show the Caller ID options a given extension can use.
 
-Get Caller ID
+Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
 
 
 ### Parameters

@@ -4,16 +4,16 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetAccountApplication**](ApplicationsApi.md#GetAccountApplication) | **Get** /accounts/{account_id}/applications/{application_id} | Show details of an individual application
-[**ListAccountApplications**](ApplicationsApi.md#ListAccountApplications) | **Get** /accounts/{account_id}/applications | Get a list of applications you have defined
+[**GetAccountApplication**](ApplicationsApi.md#GetAccountApplication) | **Get** /accounts/{account_id}/applications/{application_id} | Show details of an individual Application on a given account.
+[**ListAccountApplications**](ApplicationsApi.md#ListAccountApplications) | **Get** /accounts/{account_id}/applications | This service lists the Applications on a given account
 
 
 # **GetAccountApplication**
 > ApplicationFull GetAccountApplication($accountId, $applicationId)
 
-Show details of an individual application
+Show details of an individual Application on a given account.
 
-
+Show details of an individual Application on a given account.
 
 
 ### Parameters
@@ -41,9 +41,9 @@ Name | Type | Description  | Notes
 # **ListAccountApplications**
 > ListApplications ListAccountApplications($accountId, $filtersId, $filtersName, $sortId, $sortName, $limit, $offset, $fields)
 
-Get a list of applications you have defined
+This service lists the Applications on a given account
 
-Get a list of an account available applications
+Show details of an individual Application on a given account.
 
 
 ### Parameters

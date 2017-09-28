@@ -15,9 +15,9 @@ Name | Type | Description | Notes
 **Company** | **string** | Company Name | [optional] [default to null]
 **Department** | **string** | Department Name | [optional] [default to null]
 **JobTitle** | **string** | Job Title | [optional] [default to null]
-**Emails** | [**[]interface{}**](interface{}.md) | Email Addresses | [optional] [default to null]
-**PhoneNumbers** | [**[]interface{}**](interface{}.md) | Phone Numbers | [optional] [default to null]
-**Addresses** | [**[]interface{}**](interface{}.md) | Addresses | [optional] [default to null]
+**Emails** | [**[]Email**](Email.md) | Email Addresses | [optional] [default to null]
+**PhoneNumbers** | [**[]PhoneNumberContact**](PhoneNumberContact.md) | Phone Numbers | [optional] [default to null]
+**Addresses** | [**[]AddressListContacts**](AddressListContacts.md) | Addresses | [optional] [default to null]
 **Group** | [**interface{}**](interface{}.md) | Contact Group | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

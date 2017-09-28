@@ -106,8 +106,8 @@ func (a ExpressservicecodesApi) GetAccountExpressSrvCode(accountId int32, codeId
 }
 
 /**
- * Get the Express Service Code associated with your account in list format
- * See Express Service Codes for more detail.
+ * Get the Express Service Code associated with your account in list format.
+ * Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
  *
  * @param accountId Account ID
  * @param filtersId ID filter

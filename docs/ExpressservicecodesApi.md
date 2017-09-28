@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phone.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAccountExpressSrvCode**](ExpressservicecodesApi.md#GetAccountExpressSrvCode) | **Get** /accounts/{account_id}/express-service-codes/{code_id} | Show details of an account Express Service Code
-[**ListAccountExpressSrvCodes**](ExpressservicecodesApi.md#ListAccountExpressSrvCodes) | **Get** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format
+[**ListAccountExpressSrvCodes**](ExpressservicecodesApi.md#ListAccountExpressSrvCodes) | **Get** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format.
 
 
 # **GetAccountExpressSrvCode**
@@ -41,9 +41,9 @@ Name | Type | Description  | Notes
 # **ListAccountExpressSrvCodes**
 > ListExpressServiceCodes ListAccountExpressSrvCodes($accountId, $filtersId)
 
-Get the Express Service Code associated with your account in list format
+Get the Express Service Code associated with your account in list format.
 
-See Express Service Codes for more detail.
+Get the Express Service Code associated with your account in list format. See Express Service Codes for more detail.
 
 
 ### Parameters

@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Add a subaccount for the authenticated user or client
 
-This service shows the details of an individual Subaccount.
+Add a subaccount for the authenticated user or client
 
 
 ### Parameters
@@ -21,7 +21,7 @@ This service shows the details of an individual Subaccount.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountId** | **int32**| Account ID | 
- **data** | [**CreateSubaccountParams**](CreateSubaccountParams.md)| SMS data | 
+ **data** | [**CreateSubaccountParams**](CreateSubaccountParams.md)| Subaccount data | 
 
 ### Return type
 
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 Get a list of subaccounts for the authenticated user or client
 
-This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+Get a list of subaccounts for the authenticated user or client
 
 
 ### Parameters

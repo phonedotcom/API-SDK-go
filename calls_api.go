@@ -39,7 +39,7 @@ func NewCallsApiWithBasePath(basePath string) *CallsApi {
 
 /**
  * Make a phone call
- * 
+ * Make a phone call. See Calls for more details and how to setup caller id&#39;s. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Calls API with the following definition: POST https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/calls
  *
  * @param accountId Account ID
  * @param data Call data

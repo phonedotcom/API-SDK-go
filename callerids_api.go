@@ -38,8 +38,8 @@ func NewCalleridsApiWithBasePath(basePath string) *CalleridsApi {
 }
 
 /**
- * Show the Caller ID options a given extension can use
- * Get Caller ID
+ * Show the Caller ID options a given extension can use.
+ * Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID

@@ -19,20 +19,17 @@ type ReplacePhoneNumberParams struct {
 	Name string `json:"name,omitempty"`
 
 	// Block incoming calls
-	BlockIncoming bool `json:"block_incoming,omitempty"`
+	BlockIncoming string `json:"block_incoming,omitempty"`
 
 	// Block anonymous calls
-	BlockAnonymous bool `json:"block_anonymous,omitempty"`
+	BlockAnonymous string `json:"block_anonymous,omitempty"`
 
-	// Caller ID object
 	CallerId CallerIdPhoneNumber `json:"caller_id,omitempty"`
 
-	// SMS Forwarding Object, or NULL
 	SmsForwarding SmsForwardingParams `json:"sms_forwarding,omitempty"`
 
 	// Pool lookup object
 	PoolItem interface{} `json:"pool_item,omitempty"`
 
-	// Call Notifications object
 	CallNotifications CallNotifications `json:"call_notifications,omitempty"`
 }

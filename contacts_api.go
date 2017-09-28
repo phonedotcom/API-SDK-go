@@ -38,8 +38,8 @@ func NewContactsApiWithBasePath(basePath string) *ContactsApi {
 }
 
 /**
- * Add a new address book contact for an extension
- * For more on the input fields, see Account Contacts.
+ * Add a new address book contact for an extension.
+ * Add a new address book contact for an extension. See Account Contacts for more info on the fields in each item.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
@@ -109,15 +109,15 @@ func (a ContactsApi) CreateAccountExtensionContact(accountId int32, extensionId 
 }
 
 /**
- * 
- * 
+ * Delete a contact from the address book.
+ * Delete a contact from the address book. See Account Contacts for more info on the fields in each item.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
  * @param contactId Contact ID
- * @return *DeleteContact
+ * @return *DeleteEntry
  */
-func (a ContactsApi) DeleteAccountExtensionContact(accountId int32, extensionId int32, contactId int32) (*DeleteContact, *APIResponse, error) {
+func (a ContactsApi) DeleteAccountExtensionContact(accountId int32, extensionId int32, contactId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -160,7 +160,7 @@ func (a ContactsApi) DeleteAccountExtensionContact(accountId int32, extensionId 
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteContact)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -179,8 +179,8 @@ func (a ContactsApi) DeleteAccountExtensionContact(accountId int32, extensionId 
 }
 
 /**
- * Retrieve the details of an address book contact
- * For more info on the fields shown, see Account Contacts.
+ * Retrieve the details of an address book contact.
+ * Retrieve the details of an address book contact. See Account Contacts for more info on the fields in each item.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
@@ -249,8 +249,8 @@ func (a ContactsApi) GetAccountExtensionContact(accountId int32, extensionId int
 }
 
 /**
- * Show a list of address book contacts
- * See Account Contacts for more info on the fields in each item.
+ * Show the Caller ID options a given extension can use.
+ * Show the Caller ID options a given extension can use. See Intro to Caller IDs for more on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
@@ -339,8 +339,8 @@ func (a ContactsApi) ListAccountExtensionContacts(accountId int32, extensionId i
 }
 
 /**
- * 
- * For more on the input fields, see Account Contacts.
+ * Update the info of a contact in the address book.
+ * Update the info of a contact in the address book. See Account Contacts for more info on the fields in each item.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID

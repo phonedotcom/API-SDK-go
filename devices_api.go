@@ -38,8 +38,8 @@ func NewDevicesApiWithBasePath(basePath string) *DevicesApi {
 }
 
 /**
- * Register a generic VoIP device
- * 
+ * Register a generic VoIP device.
+ * Register a generic VoIP device. See Devices for more detail.
  *
  * @param accountId Account ID
  * @param data Device data
@@ -107,8 +107,76 @@ func (a DevicesApi) CreateAccountDevice(accountId int32, data CreateDeviceParams
 }
 
 /**
- * Show details of an individual VoIP device
- * 
+ * Delete a VoIP device.
+ * Delete a VoIP device. See Devices for more detail.
+ *
+ * @param accountId Account ID
+ * @param deviceId Device ID
+ * @return *DeleteEntry
+ */
+func (a DevicesApi) DeleteAccountDevice(accountId int32, deviceId int32) (*DeleteEntry, *APIResponse, error) {
+
+	var localVarHttpMethod = strings.ToUpper("Delete")
+	// create path and map variables
+	localVarPath := a.Configuration.BasePath + "/accounts/{account_id}/devices/{device_id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"account_id"+"}", fmt.Sprintf("%v", accountId), -1)
+	localVarPath = strings.Replace(localVarPath, "{"+"device_id"+"}", fmt.Sprintf("%v", deviceId), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := make(map[string]string)
+	var localVarPostBody interface{}
+	var localVarFileName string
+	var localVarFileBytes []byte
+	// authentication '(apiKey)' required
+	// set key with prefix in header
+	localVarHeaderParams["Authorization"] = a.Configuration.GetAPIKeyWithPrefix("Authorization")
+	// add default headers if any
+	for key := range a.Configuration.DefaultHeader {
+		localVarHeaderParams[key] = a.Configuration.DefaultHeader[key]
+	}
+
+	clearEmptyParams(localVarQueryParams)
+
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{ "application/json",  }
+
+	// set Content-Type header
+	localVarHttpContentType := a.Configuration.APIClient.SelectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{
+		"application/json",
+		}
+
+	// set Accept header
+	localVarHttpHeaderAccept := a.Configuration.APIClient.SelectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	var successPayload = new(DeleteEntry)
+	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+
+	var localVarURL, _ = url.Parse(localVarPath)
+	localVarURL.RawQuery = localVarQueryParams.Encode()
+	var localVarAPIResponse = &APIResponse{Operation: "DeleteAccountDevice", Method: localVarHttpMethod, RequestURL: localVarURL.String()}
+	if localVarHttpResponse != nil {
+		localVarAPIResponse.Response = localVarHttpResponse.RawResponse
+		localVarAPIResponse.Payload = localVarHttpResponse.Body()
+	}
+
+	if err != nil {
+		return successPayload, localVarAPIResponse, err
+	}
+	err = json.Unmarshal(localVarHttpResponse.Body(), &successPayload)
+	return successPayload, localVarAPIResponse, err
+}
+
+/**
+ * Show details of an individual VoIP device.
+ * Show details of an individual VoIP device. See Devices for more detail.
  *
  * @param accountId Account ID
  * @param deviceId Device ID
@@ -175,8 +243,8 @@ func (a DevicesApi) GetAccountDevice(accountId int32, deviceId int32) (*DeviceFu
 }
 
 /**
- * Get a list of VoIP devices associated with your account
- * 
+ * Get a list of VoIP devices associated with your account.
+ * Get a list of VoIP devices associated with your account. See Devices for more detail.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -259,8 +327,8 @@ func (a DevicesApi) ListAccountDevices(accountId int32, filtersId []string, filt
 }
 
 /**
- * Update the settings for an individual VoIP device
- * 
+ * Update the details of an individual VoIP device.
+ * Update the details of an individual VoIP device. See Devices for more detail.
  *
  * @param accountId Account ID
  * @param deviceId Device ID

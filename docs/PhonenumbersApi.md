@@ -4,18 +4,18 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountPhoneNumber**](PhonenumbersApi.md#CreateAccountPhoneNumber) | **Post** /accounts/{account_id}/phone-numbers | Add a phone number to an account
-[**GetAccountPhoneNumber**](PhonenumbersApi.md#GetAccountPhoneNumber) | **Get** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number
-[**ListAccountPhoneNumbers**](PhonenumbersApi.md#ListAccountPhoneNumbers) | **Get** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account
-[**ReplaceAccountPhoneNumber**](PhonenumbersApi.md#ReplaceAccountPhoneNumber) | **Put** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account
+[**CreateAccountPhoneNumber**](PhonenumbersApi.md#CreateAccountPhoneNumber) | **Post** /accounts/{account_id}/phone-numbers | Add a phone number to an account.
+[**GetAccountPhoneNumber**](PhonenumbersApi.md#GetAccountPhoneNumber) | **Get** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number.
+[**ListAccountPhoneNumbers**](PhonenumbersApi.md#ListAccountPhoneNumbers) | **Get** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account.
+[**ReplaceAccountPhoneNumber**](PhonenumbersApi.md#ReplaceAccountPhoneNumber) | **Put** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account.
 
 
 # **CreateAccountPhoneNumber**
 > PhoneNumberFull CreateAccountPhoneNumber($accountId, $data)
 
-Add a phone number to an account
+Add a phone number to an account.
 
-See Intro to Account Phone Numbers for more info on the properties to use.
+Add a phone number to an account. See Account Phone Numbers for more info on the properties.
 
 
 ### Parameters
@@ -43,9 +43,9 @@ Name | Type | Description  | Notes
 # **GetAccountPhoneNumber**
 > PhoneNumberFull GetAccountPhoneNumber($accountId, $numberId)
 
-Show details of an individual phone number
+Show details of an individual phone number.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
 
 
 ### Parameters
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 # **ListAccountPhoneNumbers**
 > ListPhoneNumbers ListAccountPhoneNumbers($accountId, $filtersId, $filtersName, $filtersPhoneNumber, $sortId, $sortName, $sortPhoneNumber, $limit, $offset, $fields)
 
-Get a list of phone numbers registered to an account
+Get a list of phone numbers registered to an account.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
 
 
 ### Parameters
@@ -111,9 +111,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountPhoneNumber**
 > PhoneNumberFull ReplaceAccountPhoneNumber($accountId, $numberId, $data)
 
-Update the settings for an existing phone number on your account
+Update the settings for an existing phone number on your account.
 
-See Intro to Account Phone Numbers for more info on the properties.
+Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
 
 
 ### Parameters

@@ -16,7 +16,11 @@ Name | Type | Description | Notes
 **IsMonitored** | **string** | Was call being monitored? | [optional] [default to null]
 **CallNumber** | **string** | Internal system call reference number | [optional] [default to null]
 **FinalAction** | **string** | Last action of call flow | [optional] [default to null]
-**CallRecording** | **string** | URL of call recording if available. Empty string if call recording does not exist | [optional] [default to null]
+**VoicemailUrl** | **string** | URL of voicemail if available. User may download the audio via this URL. Empty string if voicemail does not exist | [optional] [default to null]
+**VoicemailCpUrl** | **string** | URL of voicemail if available. User may listen to the audio online via this URL. Empty string if voicemail does not exist | [optional] [default to null]
+**VoicemailTranscript** | **string** | Transcript of voicemail if enabled and available | [optional] [default to null]
+**CallRecordingUrl** | **string** | URL of call recording if available. User may download the audio via this URL. Empty string if call recording does not exist | [optional] [default to null]
+**CallRecordingCpUrl** | **string** | URL of call recording if available. User may listen to the audio online via this URL. Empty string if call recording does not exist | [optional] [default to null]
 **Details** | [**[]CallDetails**](CallDetails.md) | A list of call flows from beginning of call to end of call. | [optional] [default to null]
 **CallerCnam** | **string** | Internal system caller id / name | [optional] [default to null]
 

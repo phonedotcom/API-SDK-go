@@ -186,9 +186,9 @@ func (a MediaApi) CreateAccountMediaTts(accountId int32, data CreateMediaParams)
  *
  * @param accountId Account ID
  * @param mediaId Media ID
- * @return *DeleteMedia
+ * @return *DeleteEntry
  */
-func (a MediaApi) DeleteAccountMedia(accountId int32, mediaId int32) (*DeleteMedia, *APIResponse, error) {
+func (a MediaApi) DeleteAccountMedia(accountId int32, mediaId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -230,7 +230,7 @@ func (a MediaApi) DeleteAccountMedia(accountId int32, mediaId int32) (*DeleteMed
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteMedia)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -317,8 +317,8 @@ func (a MediaApi) GetAccountMedia(accountId int32, mediaId int32) (*MediaFull, *
 }
 
 /**
- * Get a list of media recordings for an account
- * See Account Menus for more info on the properties.
+ * Get a list of media recordings for an account.
+ * Get a list of media recordings for an account. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level List Media API with the following definition: GET https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -435,7 +435,7 @@ func (a MediaApi) ReplaceAccountMediaFiles(accountId int32, mediaId int32, jsonP
 	clearEmptyParams(localVarQueryParams)
 
 	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{ "application/json",  }
+	localVarHttpContentTypes := []string{ "multipart/form-data",  }
 
 	// set Content-Type header
 	localVarHttpContentType := a.Configuration.APIClient.SelectHeaderContentType(localVarHttpContentTypes)
@@ -475,8 +475,8 @@ func (a MediaApi) ReplaceAccountMediaFiles(accountId int32, mediaId int32, jsonP
 }
 
 /**
- * Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
- * See Account Media for more info on the properties.
+ * Update a media object to your account.
+ * Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB. See Account Media for more info on the properties. Note: This API is for users with Account Owner scope access token. Users with Extension User scope token should invoke the Extension level Replace Media API with the following definition: PUT https://api.phone.com/v4/accounts/:account_id/extensions/:extension_id/media/:media_id
  *
  * @param accountId Account ID
  * @param mediaId Media ID

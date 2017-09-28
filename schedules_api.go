@@ -39,7 +39,7 @@ func NewSchedulesApiWithBasePath(basePath string) *SchedulesApi {
 
 /**
  * Show details of an individual schedule
- * This service shows the details of an individual schedule.
+ * Show details of an individual schedule
  *
  * @param accountId Account ID
  * @param scheduleId Schedule ID
@@ -107,7 +107,7 @@ func (a SchedulesApi) GetAccountSchedule(accountId int32, scheduleId int32) (*Sc
 
 /**
  * Get a list of schedules for an account
- * See Intro to Schedules for more info on the properties.
+ * Get a list of schedules for an account
  *
  * @param accountId Account ID
  * @param filtersId ID filter

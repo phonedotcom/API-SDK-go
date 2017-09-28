@@ -22,6 +22,9 @@ type ExtensionFull struct {
 	// Extension number that callers may dial. On POST, leaving this empty will result in an auto-generated value. On PUT, this field is required.
 	Extension int32 `json:"extension,omitempty"`
 
+	// API Account ID. Optional, object may return the voip_id.
+	VoipId int32 `json:"voip_id,omitempty"`
+
 	// Full name of the individual or department to which this extension is assigned
 	FullName string `json:"full_name,omitempty"`
 
@@ -53,7 +56,6 @@ type ExtensionFull struct {
 
 	Voicemail Voicemail `json:"voicemail,omitempty"`
 
-	// Call Notifications Object. See below for details.
 	CallNotifications Notification `json:"call_notifications,omitempty"`
 
 	// Route which will handle incoming voice and fax calls. Only valid on PUT requests, not POST. Output is a Route Summary Object if the route is named, otherwise the Full Route Object will be shown. Input must be a Route Lookup Object pointing to a named route. Route must belong to this extension already.

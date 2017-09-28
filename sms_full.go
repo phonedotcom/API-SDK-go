@@ -14,27 +14,30 @@ import (
 	"time"
 )
 
-// The Full SMS Object is identical to the SMS Summary Object. See above for details.
+// The Full SMS Object includes all of the properties in the SMS Summary Object.
 type SmsFull struct {
 
 	// Unique SMS ID. Read-only.
-	Id string `json:"id"`
+	Id string `json:"id,omitempty"`
 
 	// Caller ID number to display on the incoming/outgoing SMS message. For an outgoing message, it must be a phone number associated with your Phone.com account.
-	From string `json:"from"`
+	From string `json:"from,omitempty"`
 
 	// An array of SMS recipients.
-	To []Recipient `json:"to"`
+	To []Recipient `json:"to,omitempty"`
 
 	// Direction of SMS. 'in' for Incoming messages, 'out' for Outgoing messages.
-	Direction string `json:"direction"`
+	Direction string `json:"direction,omitempty"`
 
 	// Unix time stamp representing the UTC time that the object was created in the Phone.com API system.
-	CreatedEpoch int32 `json:"created_epoch"`
+	CreatedEpoch int32 `json:"created_epoch,omitempty"`
 
 	// Date string representing the UTC time that the object was created in the Phone.com API system.
-	CreatedAt time.Time `json:"created_at"`
+	CreatedAt time.Time `json:"created_at,omitempty"`
 
 	// Body of the SMS text
-	Text string `json:"text"`
+	Text string `json:"text,omitempty"`
+
+	// True when SMS is new; False when SMS has been read.
+	IsNew bool `json:"is_new,omitempty"`
 }

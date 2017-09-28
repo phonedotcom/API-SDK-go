@@ -39,7 +39,7 @@ func NewCalllogsApiWithBasePath(basePath string) *CalllogsApi {
 
 /**
  * Show details of an individual Call Log entry
- * See Call Logs for more detail.
+ * Show details of an individual Call Log entry. See Call Logs for more detail.
  *
  * @param accountId Account ID
  * @param callId Call ID
@@ -107,7 +107,7 @@ func (a CalllogsApi) GetAccountCallLogs(accountId int32, callId string) (*CallLo
 
 /**
  * Get a list of call details associated with your account
- * See Call Logs for more detail.
+ * Get a list of call details associated with your account. See Call Logs for more detail.
  *
  * @param accountId Account ID
  * @param filtersId ID filter

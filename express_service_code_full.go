@@ -20,5 +20,5 @@ type ExpressServiceCodeFull struct {
 	ExpressServiceCode string `json:"express_service_code,omitempty"`
 
 	// UNIX time stamp representing the UTC time that the Express Service Code expires. Please note that every time this service is executed, the expire_date is set to now + 24 hours.
-	ExpireDate int32 `json:"expire_date,omitempty"`
+	ExpireDate []int32 `json:"expire_date,omitempty"`
 }

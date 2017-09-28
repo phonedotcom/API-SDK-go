@@ -52,8 +52,20 @@ type CallLogFull struct {
 	// Last action of call flow
 	FinalAction string `json:"final_action,omitempty"`
 
-	// URL of call recording if available. Empty string if call recording does not exist
-	CallRecording string `json:"call_recording,omitempty"`
+	// URL of voicemail if available. User may download the audio via this URL. Empty string if voicemail does not exist
+	VoicemailUrl string `json:"voicemail_url,omitempty"`
+
+	// URL of voicemail if available. User may listen to the audio online via this URL. Empty string if voicemail does not exist
+	VoicemailCpUrl string `json:"voicemail_cp_url,omitempty"`
+
+	// Transcript of voicemail if enabled and available
+	VoicemailTranscript string `json:"voicemail_transcript,omitempty"`
+
+	// URL of call recording if available. User may download the audio via this URL. Empty string if call recording does not exist
+	CallRecordingUrl string `json:"call_recording_url,omitempty"`
+
+	// URL of call recording if available. User may listen to the audio online via this URL. Empty string if call recording does not exist
+	CallRecordingCpUrl string `json:"call_recording_cp_url,omitempty"`
 
 	// A list of call flows from beginning of call to end of call.
 	Details []CallDetails `json:"details,omitempty"`

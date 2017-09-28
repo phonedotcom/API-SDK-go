@@ -38,8 +38,8 @@ func NewRoutesApiWithBasePath(basePath string) *RoutesApi {
 }
 
 /**
- * Add a new address book contact for an extension
- * For more on the input fields, see Intro to Routes.
+ * Add a new route to the account.
+ * Add a new route to the account. See Intro to Routes for more info on the properties.
  *
  * @param accountId Account ID
  * @param data Route data
@@ -107,14 +107,14 @@ func (a RoutesApi) CreateRoute(accountId int32, data CreateRouteParams) (*RouteF
 }
 
 /**
- * 
- * 
+ * Delete a route from the account.
+ * Delete a route from the account. See Intro to Routes for more info on the properties.
  *
  * @param accountId Account ID
  * @param routeId Route ID
- * @return *DeleteRoute
+ * @return *DeleteEntry
  */
-func (a RoutesApi) DeleteAccountRoute(accountId int32, routeId int32) (*DeleteRoute, *APIResponse, error) {
+func (a RoutesApi) DeleteAccountRoute(accountId int32, routeId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -156,7 +156,7 @@ func (a RoutesApi) DeleteAccountRoute(accountId int32, routeId int32) (*DeleteRo
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteRoute)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -175,8 +175,8 @@ func (a RoutesApi) DeleteAccountRoute(accountId int32, routeId int32) (*DeleteRo
 }
 
 /**
- * Show details of an individual route
- * This service shows the details of an individual route.
+ * Show details of an individual route.
+ * Show details of an individual route. See Intro to Routes for more info on the properties.
  *
  * @param accountId Account ID
  * @param routeId Route ID
@@ -243,8 +243,8 @@ func (a RoutesApi) GetAccountRoute(accountId int32, routeId int32) (*RouteFull, 
 }
 
 /**
- * Get a list of routes for an account
- * See Intro to Routes for more info on the properties.
+ * Get a list of routes for an account.
+ * Get a list of routes for an account. See Intro to Routes for more info on the properties.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -327,8 +327,8 @@ func (a RoutesApi) ListAccountRoutes(accountId int32, filtersId []string, filter
 }
 
 /**
- * 
- * For more on the input fields, see Intro to Routes.
+ * Update the information of a route.
+ * Update the information of a route. See Intro to Routes for more info on the properties.
  *
  * @param accountId Account ID
  * @param routeId Route ID

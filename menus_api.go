@@ -38,8 +38,8 @@ func NewMenusApiWithBasePath(basePath string) *MenusApi {
 }
 
 /**
- * Create an individual menu
- * This service creates an individual menu. See Account Menus for more info on the properties.
+ * Create an individual menu.
+ * Create an individual menu. See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param data Menu data
@@ -107,14 +107,14 @@ func (a MenusApi) CreateAccountMenu(accountId int32, data CreateMenuParams) (*Me
 }
 
 /**
- * Delete an individual menu
- * See Account Menus for more info on the properties.
+ * Delete an individual menu.
+ * Delete an individual menu. See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param menuId Menu ID
- * @return *DeleteMenu
+ * @return *DeleteEntry
  */
-func (a MenusApi) DeleteAccountMenu(accountId int32, menuId int32) (*DeleteMenu, *APIResponse, error) {
+func (a MenusApi) DeleteAccountMenu(accountId int32, menuId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -156,7 +156,7 @@ func (a MenusApi) DeleteAccountMenu(accountId int32, menuId int32) (*DeleteMenu,
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteMenu)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -175,8 +175,8 @@ func (a MenusApi) DeleteAccountMenu(accountId int32, menuId int32) (*DeleteMenu,
 }
 
 /**
- * Show details of an individual menu
- * This service shows the details of an individual Menu.
+ * Show details of an individual menu.
+ * Show details of an individual menu. See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param menuId Menu ID
@@ -243,8 +243,8 @@ func (a MenusApi) GetAccountMenu(accountId int32, menuId int32) (*MenuFull, *API
 }
 
 /**
- * Get a list of menus for an account
- * See Account Menus for more info on the properties.
+ * Get a list of menus for an account.
+ * Get a list of menus for an account. See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -327,8 +327,8 @@ func (a MenusApi) ListAccountMenus(accountId int32, filtersId []string, filtersN
 }
 
 /**
- * Replace an individual menu
- * See Account Menus for more info on the properties.
+ * Replace an individual menu.
+ * Replace an individual menu. See Account Menus for more info on the properties.
  *
  * @param accountId Account ID
  * @param menuId Menu ID

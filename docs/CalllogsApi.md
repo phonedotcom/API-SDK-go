@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Show details of an individual Call Log entry
 
-See Call Logs for more detail.
+Show details of an individual Call Log entry. See Call Logs for more detail.
 
 
 ### Parameters
@@ -43,7 +43,7 @@ Name | Type | Description  | Notes
 
 Get a list of call details associated with your account
 
-See Call Logs for more detail.
+Get a list of call details associated with your account. See Call Logs for more detail.
 
 
 ### Parameters

@@ -22,7 +22,7 @@ type MenuFull struct {
 	// Boolean. Determines whether a caller can enter an extension number to bypass the menu.
 	AllowExtensionDial bool `json:"allow_extension_dial,omitempty"`
 
-	// Boolean. Determines whether a caller can enter an extension number to bypass the menu.
+	// Number of seconds to wait for the caller to choose a menu option. Must be between 1 and 5 seconds.
 	KeypressWaitTime int32 `json:"keypress_wait_time,omitempty"`
 
 	// Greeting that is played when a caller enters a menu. Output is a Media Summary Object. Input must be a Media Lookup Object. Must refer to a media recording that has is_hold_music set to FALSE.

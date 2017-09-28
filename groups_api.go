@@ -38,12 +38,12 @@ func NewGroupsApiWithBasePath(basePath string) *GroupsApi {
 }
 
 /**
- * 
- * See Account Contact Groups for more info on the properties.
+ * Add a new contact group to an account extension.
+ * Add a new contact group to an account extension. See Account Contact Groups for details on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
- * @param data Group name
+ * @param data Group data
  * @return *GroupFull
  */
 func (a GroupsApi) CreateAccountExtensionContactGroup(accountId int32, extensionId int32, data CreateGroupParams) (*GroupFull, *APIResponse, error) {
@@ -109,15 +109,15 @@ func (a GroupsApi) CreateAccountExtensionContactGroup(accountId int32, extension
 }
 
 /**
- * Delete an addressbook group
- * 
+ * Delete a contact group from the address book.
+ * Delete a contact group from the address book. See Account Contact Groups for details on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
  * @param groupId Group ID
- * @return *DeleteGroup
+ * @return *DeleteEntry
  */
-func (a GroupsApi) DeleteAccountExtensionContactGroup(accountId int32, extensionId int32, groupId int32) (*DeleteGroup, *APIResponse, error) {
+func (a GroupsApi) DeleteAccountExtensionContactGroup(accountId int32, extensionId int32, groupId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -160,7 +160,7 @@ func (a GroupsApi) DeleteAccountExtensionContactGroup(accountId int32, extension
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteGroup)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -179,8 +179,8 @@ func (a GroupsApi) DeleteAccountExtensionContactGroup(accountId int32, extension
 }
 
 /**
- * 
- * See Account Contact Groups for more info on the properties.
+ * Retrieve the information of a contact group.
+ * Retrieve the information of a contact group. See Account Contact Groups for details on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
@@ -249,8 +249,8 @@ func (a GroupsApi) GetAccountExtensionContactGroup(accountId int32, extensionId 
 }
 
 /**
- * Show a list of contact groups belonging to an extension
- * See Account Contact Groups for details on the properties.
+ * Show a list of contact groups belonging to an extension.
+ * Show a list of contact groups belonging to an extension. See Account Contact Groups for details on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
@@ -335,13 +335,13 @@ func (a GroupsApi) ListAccountExtensionContactGroups(accountId int32, extensionI
 }
 
 /**
- * 
- * See Account Contact Groups for more info on the properties.
+ * Update the information of a contact group.
+ * Update the information of a contact group. See Account Contact Groups for details on the properties.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
  * @param groupId Group ID
- * @param data Group name
+ * @param data Group data
  * @return *GroupFull
  */
 func (a GroupsApi) ReplaceAccountExtensionContactGroup(accountId int32, extensionId int32, groupId int32, data CreateGroupParams) (*GroupFull, *APIResponse, error) {

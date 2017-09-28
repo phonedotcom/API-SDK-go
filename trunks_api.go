@@ -38,8 +38,8 @@ func NewTrunksApiWithBasePath(basePath string) *TrunksApi {
 }
 
 /**
- * Add a trunk record with SIP information
- * For more on the input fields, see Account Trunks.
+ * Add a trunk record with SIP information.
+ * Add a trunk record with SIP information. See Account Trunks for more info on the properties.
  *
  * @param accountId Account ID
  * @param data Trunk data
@@ -107,14 +107,14 @@ func (a TrunksApi) CreateAccountTrunk(accountId int32, data CreateTrunkParams) (
 }
 
 /**
- * Delete a trunk from account
- * This service deletes a trunk from the account. For more on the properties of trunks, see Account Trunks.
+ * Delete a trunk from account.
+ * Delete a trunk from account. See Account Trunks for more info on the properties.
  *
  * @param accountId Account ID
  * @param trunkId Trunk ID
- * @return *DeleteTrunk
+ * @return *DeleteEntry
  */
-func (a TrunksApi) DeleteAccountTrunk(accountId int32, trunkId int32) (*DeleteTrunk, *APIResponse, error) {
+func (a TrunksApi) DeleteAccountTrunk(accountId int32, trunkId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -156,7 +156,7 @@ func (a TrunksApi) DeleteAccountTrunk(accountId int32, trunkId int32) (*DeleteTr
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteTrunk)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -175,8 +175,8 @@ func (a TrunksApi) DeleteAccountTrunk(accountId int32, trunkId int32) (*DeleteTr
 }
 
 /**
- * Show details of an individual trunk
- * This service shows the details of an individual Trunk.
+ * Show details of an individual trunk.
+ * Show details of an individual trunk. See Account Trunks for more info on the properties.
  *
  * @param accountId Account ID
  * @param trunkId Trunk ID
@@ -243,8 +243,8 @@ func (a TrunksApi) GetAccountTrunk(accountId int32, trunkId int32) (*TrunkFull, 
 }
 
 /**
- * Get a list of trunks for an account
- * See Account Trunks for more info on the properties.
+ * Get a list of trunks for an account.
+ * Get a list of trunks for an account. See Account Trunks for more info on the properties.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -327,8 +327,8 @@ func (a TrunksApi) ListAccountTrunks(accountId int32, filtersId []string, filter
 }
 
 /**
- * Replace parameters in a trunk
- * For more on the input fields, see Account Trunks.
+ * Replace parameters in a trunk.
+ * Replace parameters in a trunk. See Account Trunks for more info on the properties.
  *
  * @param accountId Account ID
  * @param trunkId Trunk ID

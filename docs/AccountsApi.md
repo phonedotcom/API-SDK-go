@@ -5,7 +5,7 @@ All URIs are relative to *https://api.phone.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**GetAccount**](AccountsApi.md#GetAccount) | **Get** /accounts/{account_id} | Retrieve details of an individual account
-[**ListAccounts**](AccountsApi.md#ListAccounts) | **Get** /accounts | Get a list of accounts visible to the authenticated user or client
+[**ListAccounts**](AccountsApi.md#ListAccounts) | **Get** /accounts | Get a list of accounts visible to the authenticated user or client.
 
 
 # **GetAccount**
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 Retrieve details of an individual account
 
-This service shows the details of an individual account. See Accounts for more info on the properties.
+Retrieve details of an individual account. See Accounts for more info on the properties.
 
 
 ### Parameters
@@ -40,9 +40,9 @@ Name | Type | Description  | Notes
 # **ListAccounts**
 > ListAccounts ListAccounts($filtersId, $sortId, $limit, $offset, $fields)
 
-Get a list of accounts visible to the authenticated user or client
+Get a list of accounts visible to the authenticated user or client.
 
-This service lists the accounts accessible to the authenticated client. In most cases, there will only be one such account. See Accounts for more info on the properties.
+Get a list of accounts visible to the authenticated user or client. In most cases, there will only be one such account. See Accounts for more info on the properties.
 
 
 ### Parameters

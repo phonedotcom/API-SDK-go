@@ -10,7 +10,7 @@
 
 package swagger
 
-// The Full Recording Object includes all of the properties from the Recording Summary Object, along with the following:
+// The Full Recording Object and the Summary Recording Object are the same.
 type MediaFull struct {
 
 	// Recording ID. Read-only.

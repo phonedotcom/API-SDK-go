@@ -31,10 +31,8 @@ type PhoneNumberFull struct {
 	// The Route assigned to handle incoming calls for this number, if any. Output is a Route Summary Object, or NULL if not set. Input can be a Route Lookup Object or NULL to unset.
 	Route RouteSummary `json:"route,omitempty"`
 
-	// Caller ID Object, or NULL
 	CallerId CallerIdPhoneNumber `json:"caller_id,omitempty"`
 
-	// SMS Forwarding Object, or NULL
 	SmsForwarding SmsForwarding `json:"sms_forwarding,omitempty"`
 
 	CallNotifications CallNotifications `json:"call_notifications,omitempty"`

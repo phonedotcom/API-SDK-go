@@ -12,10 +12,8 @@ package swagger
 
 type CreateExtensionParams struct {
 
-	// Voicemail object
-	Voicemail Voicemail `json:"voicemail,omitempty"`
+	Voicemail VoicemailInput `json:"voicemail,omitempty"`
 
-	// Call Notifications object
 	CallNotifications CallNotifications `json:"call_notifications,omitempty"`
 
 	// Caller ID
@@ -24,14 +22,11 @@ type CreateExtensionParams struct {
 	// Extension type
 	UsageType string `json:"usage_type,omitempty"`
 
-	// Allows call waiting
-	AllowsCallWaiting bool `json:"allows_call_waiting,omitempty"`
-
 	// Extension number (auto-generated if empty)
 	Extension int32 `json:"extension,omitempty"`
 
 	// Include in dial-by-name directory
-	IncludeInDirectory bool `json:"include_in_directory,omitempty"`
+	IncludeInDirectory string `json:"include_in_directory,omitempty"`
 
 	// Name (auto-generated if empty)
 	Name string `json:"name,omitempty"`
@@ -46,11 +41,11 @@ type CreateExtensionParams struct {
 	NameGreeting interface{} `json:"name_greeting,omitempty"`
 
 	// Local area code
-	LocalAreaCode int32 `json:"local_area_code,omitempty"`
+	LocalAreaCode string `json:"local_area_code,omitempty"`
 
 	// Enable outgoing calls
-	EnableOutboundCalls bool `json:"enable_outbound_calls,omitempty"`
+	EnableOutboundCalls string `json:"enable_outbound_calls,omitempty"`
 
 	// Enable Call Waiting
-	EnableCallWaiting bool `json:"enable_call_waiting,omitempty"`
+	EnableCallWaiting string `json:"enable_call_waiting,omitempty"`
 }

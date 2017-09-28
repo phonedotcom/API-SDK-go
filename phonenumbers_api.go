@@ -38,8 +38,8 @@ func NewPhonenumbersApiWithBasePath(basePath string) *PhonenumbersApi {
 }
 
 /**
- * Add a phone number to an account
- * See Intro to Account Phone Numbers for more info on the properties to use.
+ * Add a phone number to an account.
+ * Add a phone number to an account. See Account Phone Numbers for more info on the properties.
  *
  * @param accountId Account ID
  * @param data Phone Number data
@@ -107,8 +107,8 @@ func (a PhonenumbersApi) CreateAccountPhoneNumber(accountId int32, data CreatePh
 }
 
 /**
- * Show details of an individual phone number
- * See Intro to Account Phone Numbers for more info on the properties.
+ * Show details of an individual phone number.
+ * Show details of an individual phone number. See Account Phone Numbers for more info on the properties.
  *
  * @param accountId Account ID
  * @param numberId Number ID
@@ -175,8 +175,8 @@ func (a PhonenumbersApi) GetAccountPhoneNumber(accountId int32, numberId int32) 
 }
 
 /**
- * Get a list of phone numbers registered to an account
- * See Intro to Account Phone Numbers for more info on the properties.
+ * Get a list of phone numbers registered to an account.
+ * Get a list of phone numbers registered to an account. See Account Phone Numbers for more info on the properties.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -265,8 +265,8 @@ func (a PhonenumbersApi) ListAccountPhoneNumbers(accountId int32, filtersId []st
 }
 
 /**
- * Update the settings for an existing phone number on your account
- * See Intro to Account Phone Numbers for more info on the properties.
+ * Update the settings for an existing phone number on your account.
+ * Update the settings for an existing phone number on your account. See Account Phone Numbers for more info on the properties.
  *
  * @param accountId Account ID
  * @param numberId Number ID

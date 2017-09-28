@@ -38,8 +38,8 @@ func NewQueuesApiWithBasePath(basePath string) *QueuesApi {
 }
 
 /**
- * Create a queue
- * For more on the input fields, see Account Queues.
+ * Create a queue.
+ * Create a queue. See Account Queues for more info on the properties.
  *
  * @param accountId Account ID
  * @param data Queue data
@@ -107,14 +107,14 @@ func (a QueuesApi) CreateAccountQueue(accountId int32, data CreateQueueParams) (
 }
 
 /**
- * Delete a queue
- * This service a queue from the account. For more information on queue properties, see Account Queues.
+ * Delete a queue.
+ * Delete a queue. See Account Queues for more info on the properties.
  *
  * @param accountId Account ID
  * @param queueId Queue ID
- * @return *DeleteQueue
+ * @return *DeleteEntry
  */
-func (a QueuesApi) DeleteAccountQueue(accountId int32, queueId int32) (*DeleteQueue, *APIResponse, error) {
+func (a QueuesApi) DeleteAccountQueue(accountId int32, queueId int32) (*DeleteEntry, *APIResponse, error) {
 
 	var localVarHttpMethod = strings.ToUpper("Delete")
 	// create path and map variables
@@ -156,7 +156,7 @@ func (a QueuesApi) DeleteAccountQueue(accountId int32, queueId int32) (*DeleteQu
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
 	}
-	var successPayload = new(DeleteQueue)
+	var successPayload = new(DeleteEntry)
 	localVarHttpResponse, err := a.Configuration.APIClient.CallAPI(localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
 
 	var localVarURL, _ = url.Parse(localVarPath)
@@ -175,8 +175,8 @@ func (a QueuesApi) DeleteAccountQueue(accountId int32, queueId int32) (*DeleteQu
 }
 
 /**
- * Show details of an individual queue
- * This service shows the details of an individual queue. For more on the input fields, see Account Queues.
+ * Show details of an individual queue.
+ * Show details of an individual queue. See Account Queues for more info on the properties.
  *
  * @param accountId Account ID
  * @param queueId Queue ID
@@ -243,8 +243,8 @@ func (a QueuesApi) GetAccountQueue(accountId int32, queueId int32) (*QueueFull, 
 }
 
 /**
- * Get a list of queues for an account
- * The List Queues service lists all the queues belong to the account. See Account Queues for more info on the properties.
+ * Get a list of queues for an account.
+ * Get a list of queues for an account. See Account Queues for more info on the properties.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -327,8 +327,8 @@ func (a QueuesApi) ListAccountQueues(accountId int32, filtersId []string, filter
 }
 
 /**
- * Replace a queue
- * The Replace Queue service replaces the parameters of a queue. For more on the input fields, see Account Queues.
+ * Replace a queue.
+ * Replace a queue. See Account Queues for more info on the properties.
  *
  * @param accountId Account ID
  * @param queueId Queue ID

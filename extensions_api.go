@@ -38,8 +38,8 @@ func NewExtensionsApiWithBasePath(basePath string) *ExtensionsApi {
 }
 
 /**
- * Create an individual extension
- * This service shows how to create a virtual extension.
+ * Create an individual extension.
+ * Create an individual extension. See extension for more details.
  *
  * @param accountId Account ID
  * @param data Account Extensions Data
@@ -107,8 +107,8 @@ func (a ExtensionsApi) CreateAccountExtension(accountId int32, data CreateExtens
 }
 
 /**
- * Show details of an individual extension
- * This service shows the details of an individual Extension.
+ * Show details of an individual extension.
+ * Show details of an individual extension. See extension for more details.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID
@@ -175,8 +175,8 @@ func (a ExtensionsApi) GetAccountExtension(accountId int32, extensionId int32) (
 }
 
 /**
- * Get a list of extensions visible to the authenticated user or client
- * This service lists the visible extensions on a given account.
+ * Get a list of extensions visible to the authenticated user or client.
+ * Get a list of extensions visible to the authenticated user or client. See extension for more details.
  *
  * @param accountId Account ID
  * @param filtersId ID filter
@@ -265,8 +265,8 @@ func (a ExtensionsApi) ListAccountExtensions(accountId int32, filtersId []string
 }
 
 /**
- * Replace an individual extension
- * This service shows how to update an individual extension.
+ * Replace an individual extension.
+ * Replace an individual extension. See extension for more details.
  *
  * @param accountId Account ID
  * @param extensionId Extension ID

@@ -38,8 +38,8 @@ func NewApplicationsApiWithBasePath(basePath string) *ApplicationsApi {
 }
 
 /**
- * Show details of an individual application
- * 
+ * Show details of an individual Application on a given account.
+ * Show details of an individual Application on a given account.
  *
  * @param accountId Account ID
  * @param applicationId Application ID
@@ -106,8 +106,8 @@ func (a ApplicationsApi) GetAccountApplication(accountId int32, applicationId in
 }
 
 /**
- * Get a list of applications you have defined
- * Get a list of an account available applications
+ * This service lists the Applications on a given account
+ * Show details of an individual Application on a given account.
  *
  * @param accountId Account ID
  * @param filtersId ID filter

@@ -12,10 +12,8 @@ package swagger
 
 type ReplaceExtensionParams struct {
 
-	// Voicemail object
-	Voicemail Voicemail `json:"voicemail,omitempty"`
+	Voicemail VoicemailInput `json:"voicemail,omitempty"`
 
-	// Call Notifications object
 	CallNotifications CallNotifications `json:"call_notifications,omitempty"`
 
 	// Recording lookup object
@@ -28,13 +26,13 @@ type ReplaceExtensionParams struct {
 	Timezone string `json:"timezone,omitempty"`
 
 	// Include in dial-by-name directory
-	IncludeInDirectory bool `json:"include_in_directory,omitempty"`
+	IncludeInDirectory string `json:"include_in_directory,omitempty"`
 
 	// Extension number (required)
 	Extension int32 `json:"extension,omitempty"`
 
 	// Enable outgoing calls
-	EnableOutboundCalls bool `json:"enable_outbound_calls,omitempty"`
+	EnableOutboundCalls string `json:"enable_outbound_calls,omitempty"`
 
 	// Extension type
 	UsageType string `json:"usage_type,omitempty"`
@@ -43,13 +41,13 @@ type ReplaceExtensionParams struct {
 	FullName string `json:"full_name,omitempty"`
 
 	// Enable Call Waiting
-	EnableCallWaiting bool `json:"enable_call_waiting,omitempty"`
+	EnableCallWaiting string `json:"enable_call_waiting,omitempty"`
 
 	// Caller ID
 	CallerId string `json:"caller_id,omitempty"`
 
 	// Local area code
-	LocalAreaCode int32 `json:"local_area_code,omitempty"`
+	LocalAreaCode string `json:"local_area_code,omitempty"`
 
 	// Route object lookup (must belong to this extension)
 	Route string `json:"route,omitempty"`

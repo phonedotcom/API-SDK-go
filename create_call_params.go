@@ -22,7 +22,7 @@ type CreateCallParams struct {
 	CallerCallerId string `json:"caller_caller_id,omitempty"`
 
 	// Flag to set caller ID to private
-	CallerPrivate bool `json:"caller_private,omitempty"`
+	CallerPrivate string `json:"caller_private,omitempty"`
 
 	// Callee phone number in E.164 format
 	CalleePhoneNumber string `json:"callee_phone_number,omitempty"`
@@ -34,5 +34,5 @@ type CreateCallParams struct {
 	CalleeCallerId string `json:"callee_caller_id,omitempty"`
 
 	// Flag to set callee ID to private
-	CalleePrivate bool `json:"callee_private,omitempty"`
+	CalleePrivate string `json:"callee_private,omitempty"`
 }

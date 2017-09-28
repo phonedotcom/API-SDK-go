@@ -22,74 +22,103 @@ All URIs are relative to *https://api.phone.com/v4*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccountsApi* | [**GetAccount**](docs/AccountsApi.md#getaccount) | **Get** /accounts/{account_id} | Retrieve details of an individual account
-*AccountsApi* | [**ListAccounts**](docs/AccountsApi.md#listaccounts) | **Get** /accounts | Get a list of accounts visible to the authenticated user or client
-*ApplicationsApi* | [**GetAccountApplication**](docs/ApplicationsApi.md#getaccountapplication) | **Get** /accounts/{account_id}/applications/{application_id} | Show details of an individual application
-*ApplicationsApi* | [**ListAccountApplications**](docs/ApplicationsApi.md#listaccountapplications) | **Get** /accounts/{account_id}/applications | Get a list of applications you have defined
+*AccountsApi* | [**ListAccounts**](docs/AccountsApi.md#listaccounts) | **Get** /accounts | Get a list of accounts visible to the authenticated user or client.
+*ApplicationsApi* | [**GetAccountApplication**](docs/ApplicationsApi.md#getaccountapplication) | **Get** /accounts/{account_id}/applications/{application_id} | Show details of an individual Application on a given account.
+*ApplicationsApi* | [**ListAccountApplications**](docs/ApplicationsApi.md#listaccountapplications) | **Get** /accounts/{account_id}/applications | This service lists the Applications on a given account
 *AvailablenumbersApi* | [**ListAvailablePhoneNumbers**](docs/AvailablenumbersApi.md#listavailablephonenumbers) | **Get** /phone-numbers/available | 
-*CalleridsApi* | [**GetCallerIds**](docs/CalleridsApi.md#getcallerids) | **Get** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use
+*CalleridsApi* | [**GetCallerIds**](docs/CalleridsApi.md#getcallerids) | **Get** /accounts/{account_id}/extensions/{extension_id}/caller-ids | Show the Caller ID options a given extension can use.
 *CalllogsApi* | [**GetAccountCallLogs**](docs/CalllogsApi.md#getaccountcalllogs) | **Get** /accounts/{account_id}/call-logs/{call_id} | Show details of an individual Call Log entry
 *CalllogsApi* | [**ListAccountCallLogs**](docs/CalllogsApi.md#listaccountcalllogs) | **Get** /accounts/{account_id}/call-logs | Get a list of call details associated with your account
 *CallsApi* | [**CreateAccountCall**](docs/CallsApi.md#createaccountcall) | **Post** /accounts/{account_id}/calls | Make a phone call
-*ContactsApi* | [**CreateAccountExtensionContact**](docs/ContactsApi.md#createaccountextensioncontact) | **Post** /accounts/{account_id}/extensions/{extension_id}/contacts | Add a new address book contact for an extension
-*ContactsApi* | [**DeleteAccountExtensionContact**](docs/ContactsApi.md#deleteaccountextensioncontact) | **Delete** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | 
-*ContactsApi* | [**GetAccountExtensionContact**](docs/ContactsApi.md#getaccountextensioncontact) | **Get** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Retrieve the details of an address book contact
-*ContactsApi* | [**ListAccountExtensionContacts**](docs/ContactsApi.md#listaccountextensioncontacts) | **Get** /accounts/{account_id}/extensions/{extension_id}/contacts | Show a list of address book contacts
-*ContactsApi* | [**ReplaceAccountExtensionContact**](docs/ContactsApi.md#replaceaccountextensioncontact) | **Put** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | 
+*ContactsApi* | [**CreateAccountExtensionContact**](docs/ContactsApi.md#createaccountextensioncontact) | **Post** /accounts/{account_id}/extensions/{extension_id}/contacts | Add a new address book contact for an extension.
+*ContactsApi* | [**DeleteAccountExtensionContact**](docs/ContactsApi.md#deleteaccountextensioncontact) | **Delete** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Delete a contact from the address book.
+*ContactsApi* | [**GetAccountExtensionContact**](docs/ContactsApi.md#getaccountextensioncontact) | **Get** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Retrieve the details of an address book contact.
+*ContactsApi* | [**ListAccountExtensionContacts**](docs/ContactsApi.md#listaccountextensioncontacts) | **Get** /accounts/{account_id}/extensions/{extension_id}/contacts | Show the Caller ID options a given extension can use.
+*ContactsApi* | [**ReplaceAccountExtensionContact**](docs/ContactsApi.md#replaceaccountextensioncontact) | **Put** /accounts/{account_id}/extensions/{extension_id}/contacts/{contact_id} | Update the info of a contact in the address book.
 *DefaultApi* | [**Ping**](docs/DefaultApi.md#ping) | **Get** /ping | The default API command
-*DevicesApi* | [**CreateAccountDevice**](docs/DevicesApi.md#createaccountdevice) | **Post** /accounts/{account_id}/devices | Register a generic VoIP device
-*DevicesApi* | [**GetAccountDevice**](docs/DevicesApi.md#getaccountdevice) | **Get** /accounts/{account_id}/devices/{device_id} | Show details of an individual VoIP device
-*DevicesApi* | [**ListAccountDevices**](docs/DevicesApi.md#listaccountdevices) | **Get** /accounts/{account_id}/devices | Get a list of VoIP devices associated with your account
-*DevicesApi* | [**ReplaceAccountDevice**](docs/DevicesApi.md#replaceaccountdevice) | **Put** /accounts/{account_id}/devices/{device_id} | Update the settings for an individual VoIP device
+*DevicesApi* | [**CreateAccountDevice**](docs/DevicesApi.md#createaccountdevice) | **Post** /accounts/{account_id}/devices | Register a generic VoIP device.
+*DevicesApi* | [**DeleteAccountDevice**](docs/DevicesApi.md#deleteaccountdevice) | **Delete** /accounts/{account_id}/devices/{device_id} | Delete a VoIP device.
+*DevicesApi* | [**GetAccountDevice**](docs/DevicesApi.md#getaccountdevice) | **Get** /accounts/{account_id}/devices/{device_id} | Show details of an individual VoIP device.
+*DevicesApi* | [**ListAccountDevices**](docs/DevicesApi.md#listaccountdevices) | **Get** /accounts/{account_id}/devices | Get a list of VoIP devices associated with your account.
+*DevicesApi* | [**ReplaceAccountDevice**](docs/DevicesApi.md#replaceaccountdevice) | **Put** /accounts/{account_id}/devices/{device_id} | Update the details of an individual VoIP device.
 *ExpressservicecodesApi* | [**GetAccountExpressSrvCode**](docs/ExpressservicecodesApi.md#getaccountexpresssrvcode) | **Get** /accounts/{account_id}/express-service-codes/{code_id} | Show details of an account Express Service Code
-*ExpressservicecodesApi* | [**ListAccountExpressSrvCodes**](docs/ExpressservicecodesApi.md#listaccountexpresssrvcodes) | **Get** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format
-*ExtensionsApi* | [**CreateAccountExtension**](docs/ExtensionsApi.md#createaccountextension) | **Post** /accounts/{account_id}/extensions | Create an individual extension
-*ExtensionsApi* | [**GetAccountExtension**](docs/ExtensionsApi.md#getaccountextension) | **Get** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension
-*ExtensionsApi* | [**ListAccountExtensions**](docs/ExtensionsApi.md#listaccountextensions) | **Get** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client
-*ExtensionsApi* | [**ReplaceAccountExtension**](docs/ExtensionsApi.md#replaceaccountextension) | **Put** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension
-*GroupsApi* | [**CreateAccountExtensionContactGroup**](docs/GroupsApi.md#createaccountextensioncontactgroup) | **Post** /accounts/{account_id}/extensions/{extension_id}/contact-groups | 
-*GroupsApi* | [**DeleteAccountExtensionContactGroup**](docs/GroupsApi.md#deleteaccountextensioncontactgroup) | **Delete** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Delete an addressbook group
-*GroupsApi* | [**GetAccountExtensionContactGroup**](docs/GroupsApi.md#getaccountextensioncontactgroup) | **Get** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | 
-*GroupsApi* | [**ListAccountExtensionContactGroups**](docs/GroupsApi.md#listaccountextensioncontactgroups) | **Get** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Show a list of contact groups belonging to an extension
-*GroupsApi* | [**ReplaceAccountExtensionContactGroup**](docs/GroupsApi.md#replaceaccountextensioncontactgroup) | **Put** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | 
+*ExpressservicecodesApi* | [**ListAccountExpressSrvCodes**](docs/ExpressservicecodesApi.md#listaccountexpresssrvcodes) | **Get** /accounts/{account_id}/express-service-codes | Get the Express Service Code associated with your account in list format.
+*ExtensionsApi* | [**CreateAccountExtension**](docs/ExtensionsApi.md#createaccountextension) | **Post** /accounts/{account_id}/extensions | Create an individual extension.
+*ExtensionsApi* | [**GetAccountExtension**](docs/ExtensionsApi.md#getaccountextension) | **Get** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension.
+*ExtensionsApi* | [**ListAccountExtensions**](docs/ExtensionsApi.md#listaccountextensions) | **Get** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client.
+*ExtensionsApi* | [**ReplaceAccountExtension**](docs/ExtensionsApi.md#replaceaccountextension) | **Put** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension.
+*GroupsApi* | [**CreateAccountExtensionContactGroup**](docs/GroupsApi.md#createaccountextensioncontactgroup) | **Post** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Add a new contact group to an account extension.
+*GroupsApi* | [**DeleteAccountExtensionContactGroup**](docs/GroupsApi.md#deleteaccountextensioncontactgroup) | **Delete** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Delete a contact group from the address book.
+*GroupsApi* | [**GetAccountExtensionContactGroup**](docs/GroupsApi.md#getaccountextensioncontactgroup) | **Get** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Retrieve the information of a contact group.
+*GroupsApi* | [**ListAccountExtensionContactGroups**](docs/GroupsApi.md#listaccountextensioncontactgroups) | **Get** /accounts/{account_id}/extensions/{extension_id}/contact-groups | Show a list of contact groups belonging to an extension.
+*GroupsApi* | [**ReplaceAccountExtensionContactGroup**](docs/GroupsApi.md#replaceaccountextensioncontactgroup) | **Put** /accounts/{account_id}/extensions/{extension_id}/contact-groups/{group_id} | Update the information of a contact group.
+*ListenersApi* | [**CreateAccountListener**](docs/ListenersApi.md#createaccountlistener) | **Post** /accounts/{account_id}/listeners | Add a listener object to your account that can be used to subscribe an event.
+*ListenersApi* | [**DeleteAccountListener**](docs/ListenersApi.md#deleteaccountlistener) | **Delete** /accounts/{account_id}/listeners/{listener_id} | Delete an individual event listener.
+*ListenersApi* | [**GetAccountListener**](docs/ListenersApi.md#getaccountlistener) | **Get** /accounts/{account_id}/listeners/{listener_id} | Show details of an individual listener.
+*ListenersApi* | [**ListAccountListeners**](docs/ListenersApi.md#listaccountlisteners) | **Get** /accounts/{account_id}/listeners | Get a list of listeners for an account.
+*ListenersApi* | [**ReplaceAccountListener**](docs/ListenersApi.md#replaceaccountlistener) | **Put** /accounts/{account_id}/listeners/{listener_id} | Update the settings of an individual event listener.
 *MediaApi* | [**CreateAccountMediaFiles**](docs/MediaApi.md#createaccountmediafiles) | **Post** /accounts/{account_id}/media/files | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
 *MediaApi* | [**CreateAccountMediaTts**](docs/MediaApi.md#createaccountmediatts) | **Post** /accounts/{account_id}/media/tts | Add a media object to your account that can be used as a greeting or hold music. Users may create a media by using the built-in Text-to-speech (TTS) facility or upload a file of their choice. (Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB)
 *MediaApi* | [**DeleteAccountMedia**](docs/MediaApi.md#deleteaccountmedia) | **Delete** /accounts/{account_id}/media/{media_id} | Delete an individual media record
 *MediaApi* | [**GetAccountMedia**](docs/MediaApi.md#getaccountmedia) | **Get** /accounts/{account_id}/media/{media_id} | Show details of an individual media recording (Greeting or Hold Music)
-*MediaApi* | [**ListAccountMedia**](docs/MediaApi.md#listaccountmedia) | **Get** /accounts/{account_id}/media | Get a list of media recordings for an account
+*MediaApi* | [**ListAccountMedia**](docs/MediaApi.md#listaccountmedia) | **Get** /accounts/{account_id}/media | Get a list of media recordings for an account.
 *MediaApi* | [**ReplaceAccountMediaFiles**](docs/MediaApi.md#replaceaccountmediafiles) | **Put** /accounts/{account_id}/media/files/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
-*MediaApi* | [**ReplaceAccountMediaTts**](docs/MediaApi.md#replaceaccountmediatts) | **Put** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account. Note: The maximum size for media files or JSON objects included with a POST or PUT request is 10 MB.
-*MenusApi* | [**CreateAccountMenu**](docs/MenusApi.md#createaccountmenu) | **Post** /accounts/{account_id}/menus | Create an individual menu
-*MenusApi* | [**DeleteAccountMenu**](docs/MenusApi.md#deleteaccountmenu) | **Delete** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu
-*MenusApi* | [**GetAccountMenu**](docs/MenusApi.md#getaccountmenu) | **Get** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu
-*MenusApi* | [**ListAccountMenus**](docs/MenusApi.md#listaccountmenus) | **Get** /accounts/{account_id}/menus | Get a list of menus for an account
-*MenusApi* | [**ReplaceAccountMenu**](docs/MenusApi.md#replaceaccountmenu) | **Put** /accounts/{account_id}/menus/{menu_id} | Replace an individual menu
+*MediaApi* | [**ReplaceAccountMediaTts**](docs/MediaApi.md#replaceaccountmediatts) | **Put** /accounts/{account_id}/media/tts/{media_id} | Update a media object to your account.
+*MenusApi* | [**CreateAccountMenu**](docs/MenusApi.md#createaccountmenu) | **Post** /accounts/{account_id}/menus | Create an individual menu.
+*MenusApi* | [**DeleteAccountMenu**](docs/MenusApi.md#deleteaccountmenu) | **Delete** /accounts/{account_id}/menus/{menu_id} | Delete an individual menu.
+*MenusApi* | [**GetAccountMenu**](docs/MenusApi.md#getaccountmenu) | **Get** /accounts/{account_id}/menus/{menu_id} | Show details of an individual menu.
+*MenusApi* | [**ListAccountMenus**](docs/MenusApi.md#listaccountmenus) | **Get** /accounts/{account_id}/menus | Get a list of menus for an account.
+*MenusApi* | [**ReplaceAccountMenu**](docs/MenusApi.md#replaceaccountmenu) | **Put** /accounts/{account_id}/menus/{menu_id} | Replace an individual menu.
 *NumberregionsApi* | [**ListAvailablePhoneNumberRegions**](docs/NumberregionsApi.md#listavailablephonenumberregions) | **Get** /phone-numbers/available/regions | 
-*PhonenumbersApi* | [**CreateAccountPhoneNumber**](docs/PhonenumbersApi.md#createaccountphonenumber) | **Post** /accounts/{account_id}/phone-numbers | Add a phone number to an account
-*PhonenumbersApi* | [**GetAccountPhoneNumber**](docs/PhonenumbersApi.md#getaccountphonenumber) | **Get** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number
-*PhonenumbersApi* | [**ListAccountPhoneNumbers**](docs/PhonenumbersApi.md#listaccountphonenumbers) | **Get** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account
-*PhonenumbersApi* | [**ReplaceAccountPhoneNumber**](docs/PhonenumbersApi.md#replaceaccountphonenumber) | **Put** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account
-*QueuesApi* | [**CreateAccountQueue**](docs/QueuesApi.md#createaccountqueue) | **Post** /accounts/{account_id}/queues | Create a queue
-*QueuesApi* | [**DeleteAccountQueue**](docs/QueuesApi.md#deleteaccountqueue) | **Delete** /accounts/{account_id}/queues/{queue_id} | Delete a queue
-*QueuesApi* | [**GetAccountQueue**](docs/QueuesApi.md#getaccountqueue) | **Get** /accounts/{account_id}/queues/{queue_id} | Show details of an individual queue
-*QueuesApi* | [**ListAccountQueues**](docs/QueuesApi.md#listaccountqueues) | **Get** /accounts/{account_id}/queues | Get a list of queues for an account
-*QueuesApi* | [**ReplaceAccountQueue**](docs/QueuesApi.md#replaceaccountqueue) | **Put** /accounts/{account_id}/queues/{queue_id} | Replace a queue
-*RoutesApi* | [**CreateRoute**](docs/RoutesApi.md#createroute) | **Post** /accounts/{account_id}/routes | Add a new address book contact for an extension
-*RoutesApi* | [**DeleteAccountRoute**](docs/RoutesApi.md#deleteaccountroute) | **Delete** /accounts/{account_id}/routes/{route_id} | 
-*RoutesApi* | [**GetAccountRoute**](docs/RoutesApi.md#getaccountroute) | **Get** /accounts/{account_id}/routes/{route_id} | Show details of an individual route
-*RoutesApi* | [**ListAccountRoutes**](docs/RoutesApi.md#listaccountroutes) | **Get** /accounts/{account_id}/routes | Get a list of routes for an account
-*RoutesApi* | [**ReplaceAccountRoute**](docs/RoutesApi.md#replaceaccountroute) | **Put** /accounts/{account_id}/routes/{route_id} | 
+*OauthApi* | [**CreateOauthAccessToken**](docs/OauthApi.md#createoauthaccesstoken) | **Post** /oauth/access-token | To create an access token via the /oauth/access-token API, an API user may choose any one of the grant types it supports: Authorization Code Grant, Client Credential Grant, Password Credential Grant or Refresh Token Grant.
+*OauthApi* | [**CreateOauthAuthorization**](docs/OauthApi.md#createoauthauthorization) | **Get** /oauth/authorization | Create Authorization Code or Access Token.
+*OauthApi* | [**GetOauthAccessToken**](docs/OauthApi.md#getoauthaccesstoken) | **Get** /oauth/access-token | Retrieve details of an access token, such as scope, expiration and extension ID.
+*OauthclientsApi* | [**DeleteAccountOauthClient**](docs/OauthclientsApi.md#deleteaccountoauthclient) | **Delete** /accounts/{account_id}/oauth/clients/{client_id} | Delete an individual OAuth client.
+*OauthclientsApi* | [**GetAccountOauthClient**](docs/OauthclientsApi.md#getaccountoauthclient) | **Get** /accounts/{account_id}/oauth/clients/{client_id} | Show details of an individual OAuth client.
+*OauthclientsApi* | [**ListAccountOauthClients**](docs/OauthclientsApi.md#listaccountoauthclients) | **Get** /accounts/{account_id}/oauth/clients | Get a list of OAuth clients for an account.
+*OauthclientsredirecturisApi* | [**CreateAccountOauthClientsRedirectUri**](docs/OauthclientsredirecturisApi.md#createaccountoauthclientsredirecturi) | **Post** /accounts/{account_id}/oauth/clients/{client_id}/redirect-uris | Create an OAuth Client Redirect URI record.
+*OauthclientsredirecturisApi* | [**DeleteAccountOauthClientsRedirectUri**](docs/OauthclientsredirecturisApi.md#deleteaccountoauthclientsredirecturi) | **Delete** /accounts/{account_id}/oauth/clients/{client_id}/redirect-uris/{uri_id} | Delete an OAuth Client Redirect URI record.
+*OauthclientsredirecturisApi* | [**GetAccountOauthClientsRedirectUri**](docs/OauthclientsredirecturisApi.md#getaccountoauthclientsredirecturi) | **Get** /accounts/{account_id}/oauth/clients/{client_id}/redirect-uris/{uri_id} | Get details of an OAuth Client Redirect URI record.
+*OauthclientsredirecturisApi* | [**ListAccountOauthClientsRedirectUris**](docs/OauthclientsredirecturisApi.md#listaccountoauthclientsredirecturis) | **Get** /accounts/{account_id}/oauth/clients/{client_id}/redirect-uris | Get a list of OAuth Client Redirect URIs for an account.
+*PaymentmethodsApi* | [**CreateAccountPaymentMethod**](docs/PaymentmethodsApi.md#createaccountpaymentmethod) | **Post** /accounts/{account_id}/payment-methods | Create an individual payment method.
+*PaymentmethodsApi* | [**DeleteAccountPaymentMethod**](docs/PaymentmethodsApi.md#deleteaccountpaymentmethod) | **Delete** /accounts/{account_id}/payment-methods/{pm_id} | Delete an individual payment method.
+*PaymentmethodsApi* | [**GetAccountPaymentMethod**](docs/PaymentmethodsApi.md#getaccountpaymentmethod) | **Get** /accounts/{account_id}/payment-methods/{pm_id} | Show details of an individual payment method.
+*PaymentmethodsApi* | [**ListAccountPaymentMethods**](docs/PaymentmethodsApi.md#listaccountpaymentmethods) | **Get** /accounts/{account_id}/payment-methods | Get a list of payment methods for an account.
+*PaymentmethodsApi* | [**PatchAccountPaymentMethod**](docs/PaymentmethodsApi.md#patchaccountpaymentmethod) | **Patch** /accounts/{account_id}/payment-methods/{pm_id} | Replace the status of an individual payment method.
+*PhonenumbersApi* | [**CreateAccountPhoneNumber**](docs/PhonenumbersApi.md#createaccountphonenumber) | **Post** /accounts/{account_id}/phone-numbers | Add a phone number to an account.
+*PhonenumbersApi* | [**GetAccountPhoneNumber**](docs/PhonenumbersApi.md#getaccountphonenumber) | **Get** /accounts/{account_id}/phone-numbers/{number_id} | Show details of an individual phone number.
+*PhonenumbersApi* | [**ListAccountPhoneNumbers**](docs/PhonenumbersApi.md#listaccountphonenumbers) | **Get** /accounts/{account_id}/phone-numbers | Get a list of phone numbers registered to an account.
+*PhonenumbersApi* | [**ReplaceAccountPhoneNumber**](docs/PhonenumbersApi.md#replaceaccountphonenumber) | **Put** /accounts/{account_id}/phone-numbers/{number_id} | Update the settings for an existing phone number on your account.
+*QueuesApi* | [**CreateAccountQueue**](docs/QueuesApi.md#createaccountqueue) | **Post** /accounts/{account_id}/queues | Create a queue.
+*QueuesApi* | [**DeleteAccountQueue**](docs/QueuesApi.md#deleteaccountqueue) | **Delete** /accounts/{account_id}/queues/{queue_id} | Delete a queue.
+*QueuesApi* | [**GetAccountQueue**](docs/QueuesApi.md#getaccountqueue) | **Get** /accounts/{account_id}/queues/{queue_id} | Show details of an individual queue.
+*QueuesApi* | [**ListAccountQueues**](docs/QueuesApi.md#listaccountqueues) | **Get** /accounts/{account_id}/queues | Get a list of queues for an account.
+*QueuesApi* | [**ReplaceAccountQueue**](docs/QueuesApi.md#replaceaccountqueue) | **Put** /accounts/{account_id}/queues/{queue_id} | Replace a queue.
+*RoutesApi* | [**CreateRoute**](docs/RoutesApi.md#createroute) | **Post** /accounts/{account_id}/routes | Add a new route to the account.
+*RoutesApi* | [**DeleteAccountRoute**](docs/RoutesApi.md#deleteaccountroute) | **Delete** /accounts/{account_id}/routes/{route_id} | Delete a route from the account.
+*RoutesApi* | [**GetAccountRoute**](docs/RoutesApi.md#getaccountroute) | **Get** /accounts/{account_id}/routes/{route_id} | Show details of an individual route.
+*RoutesApi* | [**ListAccountRoutes**](docs/RoutesApi.md#listaccountroutes) | **Get** /accounts/{account_id}/routes | Get a list of routes for an account.
+*RoutesApi* | [**ReplaceAccountRoute**](docs/RoutesApi.md#replaceaccountroute) | **Put** /accounts/{account_id}/routes/{route_id} | Update the information of a route.
 *SchedulesApi* | [**GetAccountSchedule**](docs/SchedulesApi.md#getaccountschedule) | **Get** /accounts/{account_id}/schedules/{schedule_id} | Show details of an individual schedule
 *SchedulesApi* | [**ListAccountSchedules**](docs/SchedulesApi.md#listaccountschedules) | **Get** /accounts/{account_id}/schedules | Get a list of schedules for an account
-*SmsApi* | [**CreateAccountSms**](docs/SmsApi.md#createaccountsms) | **Post** /accounts/{account_id}/sms | Send a SMS to one or a group of recipients
-*SmsApi* | [**GetAccountSms**](docs/SmsApi.md#getaccountsms) | **Get** /accounts/{account_id}/sms/{sms_id} | Show details of an individual SMS
-*SmsApi* | [**ListAccountSms**](docs/SmsApi.md#listaccountsms) | **Get** /accounts/{account_id}/sms | Get a list of SMS messages for an account
+*SmsApi* | [**CreateAccountSms**](docs/SmsApi.md#createaccountsms) | **Post** /accounts/{account_id}/sms | Send a SMS to one or a group of recipients.
+*SmsApi* | [**GetAccountSms**](docs/SmsApi.md#getaccountsms) | **Get** /accounts/{account_id}/sms/{sms_id} | This service shows the details of an individual SMS.
+*SmsApi* | [**ListAccountSms**](docs/SmsApi.md#listaccountsms) | **Get** /accounts/{account_id}/sms | Get a list of SMS messages for an account.
+*SmsApi* | [**PatchAccountSms**](docs/SmsApi.md#patchaccountsms) | **Patch** /accounts/{account_id}/sms/{sms_id} | Update the is_new parameter in a sms record.
+*SubaccountpricingApi* | [**CreateAccountSubaccountPricing**](docs/SubaccountpricingApi.md#createaccountsubaccountpricing) | **Post** /accounts/{account_id}/subaccounts/{subaccount_id}/pricing | Add a pricing plan to a subaccount.
+*SubaccountpricingApi* | [**DeleteAccountSubaccountPricing**](docs/SubaccountpricingApi.md#deleteaccountsubaccountpricing) | **Delete** /accounts/{account_id}/subaccounts/{subaccount_id}/pricing/{pricing_id} | Delete a pricing plan from a subaccount.
+*SubaccountpricingApi* | [**GetAccountSubaccountPricing**](docs/SubaccountpricingApi.md#getaccountsubaccountpricing) | **Get** /accounts/{account_id}/subaccounts/{subaccount_id}/pricing/{pricing_id} | Get the details of a pricing plan for a subaccount.
+*SubaccountpricingApi* | [**ListAccountSubaccountPricing**](docs/SubaccountpricingApi.md#listaccountsubaccountpricing) | **Get** /accounts/{account_id}/subaccounts/{subaccount_id}/pricing | Get a list of pricing plans for a subaccount.
 *SubaccountsApi* | [**CreateAccountSubaccount**](docs/SubaccountsApi.md#createaccountsubaccount) | **Post** /accounts/{account_id}/subaccounts | Add a subaccount for the authenticated user or client
 *SubaccountsApi* | [**ListAccountSubaccounts**](docs/SubaccountsApi.md#listaccountsubaccounts) | **Get** /accounts/{account_id}/subaccounts | Get a list of subaccounts for the authenticated user or client
-*TrunksApi* | [**CreateAccountTrunk**](docs/TrunksApi.md#createaccounttrunk) | **Post** /accounts/{account_id}/trunks | Add a trunk record with SIP information
-*TrunksApi* | [**DeleteAccountTrunk**](docs/TrunksApi.md#deleteaccounttrunk) | **Delete** /accounts/{account_id}/trunks/{trunk_id} | Delete a trunk from account
-*TrunksApi* | [**GetAccountTrunk**](docs/TrunksApi.md#getaccounttrunk) | **Get** /accounts/{account_id}/trunks/{trunk_id} | Show details of an individual trunk
-*TrunksApi* | [**ListAccountTrunks**](docs/TrunksApi.md#listaccounttrunks) | **Get** /accounts/{account_id}/trunks | Get a list of trunks for an account
-*TrunksApi* | [**ReplaceAccountTrunk**](docs/TrunksApi.md#replaceaccounttrunk) | **Put** /accounts/{account_id}/trunks/{trunk_id} | Replace parameters in a trunk
+*TrunksApi* | [**CreateAccountTrunk**](docs/TrunksApi.md#createaccounttrunk) | **Post** /accounts/{account_id}/trunks | Add a trunk record with SIP information.
+*TrunksApi* | [**DeleteAccountTrunk**](docs/TrunksApi.md#deleteaccounttrunk) | **Delete** /accounts/{account_id}/trunks/{trunk_id} | Delete a trunk from account.
+*TrunksApi* | [**GetAccountTrunk**](docs/TrunksApi.md#getaccounttrunk) | **Get** /accounts/{account_id}/trunks/{trunk_id} | Show details of an individual trunk.
+*TrunksApi* | [**ListAccountTrunks**](docs/TrunksApi.md#listaccounttrunks) | **Get** /accounts/{account_id}/trunks | Get a list of trunks for an account.
+*TrunksApi* | [**ReplaceAccountTrunk**](docs/TrunksApi.md#replaceaccounttrunk) | **Put** /accounts/{account_id}/trunks/{trunk_id} | Replace parameters in a trunk.
+*VoicemailApi* | [**GetAccountVoicemail**](docs/VoicemailApi.md#getaccountvoicemail) | **Get** /accounts/{account_id}/voicemail/{voicemail_id} | This service shows the details of an individual voicemail.
+*VoicemailApi* | [**ListAccountVoicemail**](docs/VoicemailApi.md#listaccountvoicemail) | **Get** /accounts/{account_id}/voicemail | Get a list of voicemail messages for an account.
+*VoicemailApi* | [**PatchAccountVoicemail**](docs/VoicemailApi.md#patchaccountvoicemail) | **Patch** /accounts/{account_id}/voicemail/{voicemail_id} | Update the is_new parameter in a voicemail record.
 
 
 ## Documentation For Models
@@ -105,32 +134,32 @@ Class | Method | HTTP request | Description
  - [CallFull](docs/CallFull.md)
  - [CallLogFull](docs/CallLogFull.md)
  - [CallNotifications](docs/CallNotifications.md)
+ - [CallbackObject](docs/CallbackObject.md)
  - [CallerIdFull](docs/CallerIdFull.md)
  - [CallerIdPhoneNumber](docs/CallerIdPhoneNumber.md)
  - [ContactAccount](docs/ContactAccount.md)
  - [ContactFull](docs/ContactFull.md)
- - [ContactSubaccount](docs/ContactSubaccount.md)
+ - [ContactResponse](docs/ContactResponse.md)
  - [ContactSummary](docs/ContactSummary.md)
  - [CreateCallParams](docs/CreateCallParams.md)
  - [CreateContactParams](docs/CreateContactParams.md)
  - [CreateDeviceParams](docs/CreateDeviceParams.md)
  - [CreateExtensionParams](docs/CreateExtensionParams.md)
  - [CreateGroupParams](docs/CreateGroupParams.md)
+ - [CreateListenerParams](docs/CreateListenerParams.md)
  - [CreateMediaParams](docs/CreateMediaParams.md)
  - [CreateMenuParams](docs/CreateMenuParams.md)
+ - [CreateOauthParams](docs/CreateOauthParams.md)
+ - [CreatePaymentParams](docs/CreatePaymentParams.md)
  - [CreatePhoneNumberParams](docs/CreatePhoneNumberParams.md)
+ - [CreatePricingParams](docs/CreatePricingParams.md)
  - [CreateQueueParams](docs/CreateQueueParams.md)
+ - [CreateRedirectUriParams](docs/CreateRedirectUriParams.md)
  - [CreateRouteParams](docs/CreateRouteParams.md)
  - [CreateSmsParams](docs/CreateSmsParams.md)
  - [CreateSubaccountParams](docs/CreateSubaccountParams.md)
  - [CreateTrunkParams](docs/CreateTrunkParams.md)
- - [DeleteContact](docs/DeleteContact.md)
- - [DeleteGroup](docs/DeleteGroup.md)
- - [DeleteMedia](docs/DeleteMedia.md)
- - [DeleteMenu](docs/DeleteMenu.md)
- - [DeleteQueue](docs/DeleteQueue.md)
- - [DeleteRoute](docs/DeleteRoute.md)
- - [DeleteTrunk](docs/DeleteTrunk.md)
+ - [DeleteEntry](docs/DeleteEntry.md)
  - [DeviceFull](docs/DeviceFull.md)
  - [DeviceMembership](docs/DeviceMembership.md)
  - [DeviceSummary](docs/DeviceSummary.md)
@@ -148,7 +177,11 @@ Class | Method | HTTP request | Description
  - [FilterListAvailableNumbers](docs/FilterListAvailableNumbers.md)
  - [FilterListPhoneNumbersRegions](docs/FilterListPhoneNumbersRegions.md)
  - [FilterNameNumberArray](docs/FilterNameNumberArray.md)
+ - [FilterVoicemailArray](docs/FilterVoicemailArray.md)
+ - [FromObject](docs/FromObject.md)
+ - [GetOauthAccessToken](docs/GetOauthAccessToken.md)
  - [Greeting](docs/Greeting.md)
+ - [GreetingInput](docs/GreetingInput.md)
  - [GroupFull](docs/GroupFull.md)
  - [GroupListContacts](docs/GroupListContacts.md)
  - [GroupSummary](docs/GroupSummary.md)
@@ -164,29 +197,47 @@ Class | Method | HTTP request | Description
  - [ListExpressServiceCodes](docs/ListExpressServiceCodes.md)
  - [ListExtensions](docs/ListExtensions.md)
  - [ListGroups](docs/ListGroups.md)
+ - [ListListeners](docs/ListListeners.md)
  - [ListMedia](docs/ListMedia.md)
  - [ListMenus](docs/ListMenus.md)
+ - [ListOauthClients](docs/ListOauthClients.md)
+ - [ListOauthClientsRedirectUris](docs/ListOauthClientsRedirectUris.md)
+ - [ListPaymentMethods](docs/ListPaymentMethods.md)
  - [ListPhoneNumbers](docs/ListPhoneNumbers.md)
  - [ListPhoneNumbersRegions](docs/ListPhoneNumbersRegions.md)
+ - [ListPricings](docs/ListPricings.md)
  - [ListQueues](docs/ListQueues.md)
  - [ListRoutes](docs/ListRoutes.md)
  - [ListSchedules](docs/ListSchedules.md)
  - [ListSms](docs/ListSms.md)
  - [ListTrunks](docs/ListTrunks.md)
+ - [ListVoicemail](docs/ListVoicemail.md)
+ - [ListenerFull](docs/ListenerFull.md)
  - [MediaFull](docs/MediaFull.md)
  - [MediaSummary](docs/MediaSummary.md)
  - [Member](docs/Member.md)
  - [MenuFull](docs/MenuFull.md)
  - [MenuSummary](docs/MenuSummary.md)
  - [Notification](docs/Notification.md)
+ - [OauthAccessToken](docs/OauthAccessToken.md)
+ - [OauthClientFull](docs/OauthClientFull.md)
+ - [OauthClientRedirectUriFull](docs/OauthClientRedirectUriFull.md)
  - [Option](docs/Option.md)
+ - [PatchPaymentParams](docs/PatchPaymentParams.md)
+ - [PatchSmsParams](docs/PatchSmsParams.md)
+ - [PatchVoicemailParams](docs/PatchVoicemailParams.md)
+ - [PaymentFull](docs/PaymentFull.md)
+ - [PaymentSummary](docs/PaymentSummary.md)
  - [PhoneNumberContact](docs/PhoneNumberContact.md)
  - [PhoneNumberFull](docs/PhoneNumberFull.md)
  - [PhoneNumbersRegionFull](docs/PhoneNumbersRegionFull.md)
  - [PingResponse](docs/PingResponse.md)
+ - [PricingFull](docs/PricingFull.md)
+ - [PricingObject](docs/PricingObject.md)
  - [QueueFull](docs/QueueFull.md)
  - [QueueSummary](docs/QueueSummary.md)
  - [Recipient](docs/Recipient.md)
+ - [RedirectUriFull](docs/RedirectUriFull.md)
  - [ReplaceExtensionParams](docs/ReplaceExtensionParams.md)
  - [ReplaceMenuParams](docs/ReplaceMenuParams.md)
  - [ReplacePhoneNumberParams](docs/ReplacePhoneNumberParams.md)
@@ -198,6 +249,7 @@ Class | Method | HTTP request | Description
  - [RuleSetForwardItem](docs/RuleSetForwardItem.md)
  - [ScheduleFull](docs/ScheduleFull.md)
  - [ScheduleSummary](docs/ScheduleSummary.md)
+ - [ScopeDetails](docs/ScopeDetails.md)
  - [SipAuthentication](docs/SipAuthentication.md)
  - [SmsForwarding](docs/SmsForwarding.md)
  - [SmsForwardingParams](docs/SmsForwardingParams.md)
@@ -215,6 +267,8 @@ Class | Method | HTTP request | Description
  - [TrunkFull](docs/TrunkFull.md)
  - [TrunkSummary](docs/TrunkSummary.md)
  - [Voicemail](docs/Voicemail.md)
+ - [VoicemailFull](docs/VoicemailFull.md)
+ - [VoicemailInput](docs/VoicemailInput.md)
 
 
 ## Documentation For Authorization

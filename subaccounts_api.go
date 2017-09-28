@@ -39,10 +39,10 @@ func NewSubaccountsApiWithBasePath(basePath string) *SubaccountsApi {
 
 /**
  * Add a subaccount for the authenticated user or client
- * This service shows the details of an individual Subaccount.
+ * Add a subaccount for the authenticated user or client
  *
  * @param accountId Account ID
- * @param data SMS data
+ * @param data Subaccount data
  * @return *AccountFull
  */
 func (a SubaccountsApi) CreateAccountSubaccount(accountId int32, data CreateSubaccountParams) (*AccountFull, *APIResponse, error) {
@@ -108,7 +108,7 @@ func (a SubaccountsApi) CreateAccountSubaccount(accountId int32, data CreateSuba
 
 /**
  * Get a list of subaccounts for the authenticated user or client
- * This service lists the Subaccount of the authenticated client. In most cases, there will not be any.
+ * Get a list of subaccounts for the authenticated user or client
  *
  * @param accountId Account ID
  * @param filtersId ID filter

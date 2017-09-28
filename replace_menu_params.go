@@ -16,9 +16,9 @@ type ReplaceMenuParams struct {
 
 	Greeting interface{} `json:"greeting,omitempty"`
 
-	InvalidKeypress interface{} `json:"invalid_keypress,omitempty"`
+	KeypressError interface{} `json:"keypress_error,omitempty"`
 
-	AllowExtensionDial bool `json:"allow_extension_dial,omitempty"`
+	AllowExtensionDial string `json:"allow_extension_dial,omitempty"`
 
 	KeypressWaitTime int32 `json:"keypress_wait_time,omitempty"`
 

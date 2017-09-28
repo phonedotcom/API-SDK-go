@@ -4,18 +4,18 @@ All URIs are relative to *https://api.phone.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountExtension**](ExtensionsApi.md#CreateAccountExtension) | **Post** /accounts/{account_id}/extensions | Create an individual extension
-[**GetAccountExtension**](ExtensionsApi.md#GetAccountExtension) | **Get** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension
-[**ListAccountExtensions**](ExtensionsApi.md#ListAccountExtensions) | **Get** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client
-[**ReplaceAccountExtension**](ExtensionsApi.md#ReplaceAccountExtension) | **Put** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension
+[**CreateAccountExtension**](ExtensionsApi.md#CreateAccountExtension) | **Post** /accounts/{account_id}/extensions | Create an individual extension.
+[**GetAccountExtension**](ExtensionsApi.md#GetAccountExtension) | **Get** /accounts/{account_id}/extensions/{extension_id} | Show details of an individual extension.
+[**ListAccountExtensions**](ExtensionsApi.md#ListAccountExtensions) | **Get** /accounts/{account_id}/extensions | Get a list of extensions visible to the authenticated user or client.
+[**ReplaceAccountExtension**](ExtensionsApi.md#ReplaceAccountExtension) | **Put** /accounts/{account_id}/extensions/{extension_id} | Replace an individual extension.
 
 
 # **CreateAccountExtension**
 > ExtensionFull CreateAccountExtension($accountId, $data)
 
-Create an individual extension
+Create an individual extension.
 
-This service shows how to create a virtual extension.
+Create an individual extension. See extension for more details.
 
 
 ### Parameters
@@ -43,9 +43,9 @@ Name | Type | Description  | Notes
 # **GetAccountExtension**
 > ExtensionFull GetAccountExtension($accountId, $extensionId)
 
-Show details of an individual extension
+Show details of an individual extension.
 
-This service shows the details of an individual Extension.
+Show details of an individual extension. See extension for more details.
 
 
 ### Parameters
@@ -73,9 +73,9 @@ Name | Type | Description  | Notes
 # **ListAccountExtensions**
 > ListExtensions ListAccountExtensions($accountId, $filtersId, $filtersExtension, $filtersName, $sortId, $sortExtension, $sortName, $limit, $offset, $fields)
 
-Get a list of extensions visible to the authenticated user or client
+Get a list of extensions visible to the authenticated user or client.
 
-This service lists the visible extensions on a given account.
+Get a list of extensions visible to the authenticated user or client. See extension for more details.
 
 
 ### Parameters
@@ -111,9 +111,9 @@ Name | Type | Description  | Notes
 # **ReplaceAccountExtension**
 > ExtensionFull ReplaceAccountExtension($accountId, $extensionId, $data)
 
-Replace an individual extension
+Replace an individual extension.
 
-This service shows how to update an individual extension.
+Replace an individual extension. See extension for more details.
 
 
 ### Parameters
